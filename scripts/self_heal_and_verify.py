@@ -251,7 +251,7 @@ def run_self_healing_verification(target_dir: Path) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="CAU Autonomous Self-Healing & Verification Engine")
-    parser.add_argument("--target-dir", required=True, help="Clone output directory to verify and heal")
+    parser.add_argument("--target-dir", "--target", dest="target_dir", required=True, help="Clone output directory to verify and heal")
     args = parser.parse_args()
 
     target_path = Path(args.target_dir)

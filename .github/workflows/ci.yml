@@ -1,0 +1,57 @@
+name: CI / Sub-Pixel Parity Audit
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  audit-and-verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Set up Node.js for Syntax Checks
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Core Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 requests pillow
+
+      - name: Run Self-Healing Engine Verification
+        run: |
+          python scripts/self_heal_and_verify.py --target-dir CLONE_EXAMPLES/gaurav_portfolio
+          python scripts/self_heal_and_verify.py --target-dir CLONE_EXAMPLES/dennis_snellenberg
+          python scripts/self_heal_and_verify.py --target-dir CLONE_EXAMPLES/spotify
+          python scripts/self_heal_and_verify.py --target-dir CLONE_EXAMPLES/swiggy
+          python scripts/self_heal_and_verify.py --target-dir CLONE_EXAMPLES/rafael_varona
+          python scripts/self_heal_and_verify.py --target-dir CLONE_EXAMPLES/brittany_chiang
+
+      - name: Run Sub-Pixel Micro-Fidelity Audits (100% Target)
+        run: |
+          python scripts/audit_subpixel_fidelity.py --target CLONE_EXAMPLES/gaurav_portfolio
+          python scripts/audit_subpixel_fidelity.py --target CLONE_EXAMPLES/dennis_snellenberg
+          python scripts/audit_subpixel_fidelity.py --target CLONE_EXAMPLES/spotify
+          python scripts/audit_subpixel_fidelity.py --target CLONE_EXAMPLES/swiggy
+          python scripts/audit_subpixel_fidelity.py --target CLONE_EXAMPLES/rafael_varona
+          python scripts/audit_subpixel_fidelity.py --target CLONE_EXAMPLES/brittany_chiang
+
+      - name: Test End-to-End Pipeline on Reference SaaS Demo
+        run: |
+          python clone_any_ui.py --file examples/reference_saas_landing/index.html --out ./ci_test_run --all
+          python scripts/self_heal_and_verify.py --target-dir ./ci_test_run
+          python scripts/audit_subpixel_fidelity.py --target ./ci_test_run

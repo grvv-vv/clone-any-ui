@@ -16,6 +16,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import os
 import re
@@ -82,22 +83,60 @@ IMPORT_RE = re.compile(r'@import\s+(?:url\()?["\']?([^"\'()]+)["\']?\)?\s*;', re
 
 
 def get_chrome_executable() -> str | None:
-    candidates = [
-        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
-        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
-        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
-        "google-chrome",
-        "chrome",
-        "chromium",
-        "msedge",
-    ]
+    candidates = []
+
+    # Windows dynamic discovery
+    local_app_data = os.environ.get("LOCALAPPDATA", "")
+    program_files = os.environ.get("PROGRAMFILES", r"C:\Program Files")
+    program_files_x86 = os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)")
+
+    if local_app_data:
+        candidates.extend([
+            os.path.join(local_app_data, r"Google\Chrome\Application\chrome.exe"),
+            os.path.join(local_app_data, r"BraveSoftware\Brave-Browser\Application\brave.exe"),
+            os.path.join(local_app_data, r"Microsoft\Edge\Application\msedge.exe"),
+        ])
+    if program_files:
+        candidates.extend([
+            os.path.join(program_files, r"Google\Chrome\Application\chrome.exe"),
+            os.path.join(program_files, r"BraveSoftware\Brave-Browser\Application\brave.exe"),
+            os.path.join(program_files, r"Microsoft\Edge\Application\msedge.exe"),
+        ])
+    if program_files_x86:
+        candidates.extend([
+            os.path.join(program_files_x86, r"Google\Chrome\Application\chrome.exe"),
+            os.path.join(program_files_x86, r"BraveSoftware\Brave-Browser\Application\brave.exe"),
+            os.path.join(program_files_x86, r"Microsoft\Edge\Application\msedge.exe"),
+        ])
+
+    # macOS paths
+    candidates.extend([
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+        "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+        "/Applications/Chromium.app/Contents/MacOS/Chromium",
+    ])
+
+    # Linux paths
+    candidates.extend([
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/usr/bin/brave-browser",
+        "/usr/bin/microsoft-edge-stable",
+        "/snap/bin/chromium",
+    ])
+
     for path in candidates:
-        if os.path.isabs(path) and os.path.exists(path):
+        if os.path.exists(path):
             return path
-        found = shutil.which(path)
+
+    for binary in ["chrome", "google-chrome", "google-chrome-stable", "chromium", "chromium-browser", "brave", "msedge"]:
+        found = shutil.which(binary)
         if found:
             return found
+
     return None
 
 
@@ -383,12 +422,10 @@ def main() -> None:
         if best:
             target_images.add(best)
 
-    downloaded_images = 0
-    for idx, img_ref in enumerate(list(target_images)[:100]):
-        img_ref_clean = img_ref.strip()
+    def download_single_image(img_ref_item: str):
+        img_ref_clean = img_ref_item.strip()
         if not img_ref_clean or img_ref_clean.startswith("data:"):
-            continue
-
+            return None
         img_url = urljoin(args.url, img_ref_clean)
         parsed = urlparse(img_url)
         ext = os.path.splitext(parsed.path)[1].lower() or ".webp"
@@ -396,19 +433,32 @@ def main() -> None:
             ext = ".webp"
         safe_img_name = make_safe_filename(img_url, default_ext=ext)
         target_file = images_dir / safe_img_name
-
         data, err = fetch_with_requests(img_url, session, referer=args.url)
-        if data and len(data) > 100:
-            target_file.write_bytes(data)
-            clean_html = clean_html.replace(img_ref, f"./assets/images/{safe_img_name}")
-            manifest["assets"].append({"url": img_url, "local": f"assets/images/{safe_img_name}", "type": "image"})
-            downloaded_images += 1
-        else:
-            # Preserve exact remote live URL - NEVER inject an ugly placeholder
-            clean_html = clean_html.replace(img_ref, img_url)
-            manifest["assets"].append({"url": img_url, "local": img_url, "type": "image-remote-exact", "note": str(err)})
+        return (img_ref_item, img_url, safe_img_name, target_file, data, err)
 
-    print(f"  [✓] Mirrored {downloaded_images} exact images to local disk (preserved live URLs for any restricted CDN assets)")
+    downloaded_images = 0
+    candidate_refs = [r for r in list(target_images)[:100] if r.strip() and not r.strip().startswith("data:")]
+
+    with ThreadPoolExecutor(max_workers=12) as executor:
+        futures = {executor.submit(download_single_image, ref): ref for ref in candidate_refs}
+        for future in as_completed(futures):
+            res = future.result()
+            if not res:
+                continue
+            img_ref, img_url, safe_img_name, target_file, data, err = res
+            if data and len(data) > 100:
+                try:
+                    target_file.write_bytes(data)
+                    clean_html = clean_html.replace(img_ref, f"./assets/images/{safe_img_name}")
+                    manifest["assets"].append({"url": img_url, "local": f"assets/images/{safe_img_name}", "type": "image"})
+                    downloaded_images += 1
+                except Exception:
+                    clean_html = clean_html.replace(img_ref, img_url)
+            else:
+                clean_html = clean_html.replace(img_ref, img_url)
+                manifest["assets"].append({"url": img_url, "local": img_url, "type": "image-remote-exact", "note": str(err)})
+
+    print(f"  [✓] Mirrored {downloaded_images} exact images to local disk (concurrency 12x, preserved live URLs for any restricted CDN assets)")
 
     # 4B. Fix lazy-loading images in clean HTML: promote data-src to src so images render instantly
     def promote_lazy_src(match: re.Match) -> str:

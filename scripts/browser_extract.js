@@ -104,7 +104,7 @@
   });
 
   // 7. Output to Clipboard & Download Option
-  const finalHtml = '<!DOCTYPE html>\\n' + cloneDoc.outerHTML;
+  const finalHtml = '<!DOCTYPE html>\n' + cloneDoc.outerHTML;
 
   // Copy to clipboard
   if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -129,3 +129,4 @@
     console.log('%c✅ [CAU] DOM saved as cau_dom_dump.html (Copy to your clone workspace)', 'color: #10b981; font-size: 14px; font-weight: bold;');
   }
 })();
+

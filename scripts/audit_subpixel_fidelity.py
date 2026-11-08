@@ -138,7 +138,7 @@ def audit_clone_fidelity(target_dir: Path) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="CAU Sub-Pixel Fidelity & Microscopic Quality Auditor")
-    parser.add_argument("--target-dir", required=True, help="Target directory to audit")
+    parser.add_argument("--target-dir", "--target", dest="target_dir", required=True, help="Target directory to audit")
     args = parser.parse_args()
 
     target_path = Path(args.target_dir)

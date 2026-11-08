@@ -29,26 +29,65 @@ except ImportError:
     requests = None
 
 
-CHROME_CANDIDATES = [
-    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
-    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-    r"C:\Users\PC\AppData\Local\Google\Chrome\Application\chrome.exe",
-    r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe",
-    r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
-    r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
-    "/usr/bin/google-chrome",
-    "/usr/bin/chromium-browser",
-    "/usr/bin/chromium",
-    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-]
+def get_browser_candidates() -> list[str]:
+    """Dynamically builds candidate executable paths across Windows, macOS, and Linux."""
+    candidates = []
+
+    # Windows dynamic discovery
+    local_app_data = os.environ.get("LOCALAPPDATA", "")
+    program_files = os.environ.get("PROGRAMFILES", r"C:\Program Files")
+    program_files_x86 = os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)")
+
+    if local_app_data:
+        candidates.extend([
+            os.path.join(local_app_data, r"Google\Chrome\Application\chrome.exe"),
+            os.path.join(local_app_data, r"BraveSoftware\Brave-Browser\Application\brave.exe"),
+            os.path.join(local_app_data, r"Microsoft\Edge\Application\msedge.exe"),
+        ])
+    if program_files:
+        candidates.extend([
+            os.path.join(program_files, r"Google\Chrome\Application\chrome.exe"),
+            os.path.join(program_files, r"BraveSoftware\Brave-Browser\Application\brave.exe"),
+            os.path.join(program_files, r"Microsoft\Edge\Application\msedge.exe"),
+        ])
+    if program_files_x86:
+        candidates.extend([
+            os.path.join(program_files_x86, r"Google\Chrome\Application\chrome.exe"),
+            os.path.join(program_files_x86, r"BraveSoftware\Brave-Browser\Application\brave.exe"),
+            os.path.join(program_files_x86, r"Microsoft\Edge\Application\msedge.exe"),
+        ])
+
+    # macOS paths
+    candidates.extend([
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+        "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+        "/Applications/Chromium.app/Contents/MacOS/Chromium",
+    ])
+
+    # Linux paths
+    candidates.extend([
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/usr/bin/brave-browser",
+        "/usr/bin/microsoft-edge-stable",
+        "/snap/bin/chromium",
+    ])
+
+    return candidates
 
 
 def find_chrome() -> str | None:
-    for path in CHROME_CANDIDATES:
+    for path in get_browser_candidates():
         if os.path.exists(path):
             return path
-    which_chrome = shutil.which("chrome") or shutil.which("google-chrome") or shutil.which("chromium")
-    return which_chrome
+    for binary in ["chrome", "google-chrome", "google-chrome-stable", "chromium", "chromium-browser", "brave", "msedge"]:
+        found = shutil.which(binary)
+        if found:
+            return found
+    return None
 
 
 # JavaScript injected into target page before DOM serialization
@@ -248,3 +287,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
