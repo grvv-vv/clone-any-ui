@@ -1,0 +1,120 @@
+{
+  "source_url": "https://dennissnellenberg.com/",
+  "assets": [
+    {
+      "url": "https://dennissnellenberg.com/assets/img/DSC07312-2.jpg",
+      "local": "assets\\images\\DSC07312-2_40571.jpg",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/DSC07292.jpg",
+      "local": "assets\\images\\DSC07292_73167.jpg",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/DSC07079.jpg",
+      "local": "assets\\images\\DSC07079_45307.jpg",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/Kien_Team-16.jpg",
+      "local": "assets\\images\\Kien_Team-16_16477.jpg",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/css/style-new.css",
+      "local": "assets/css/style-new_07357.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/css/locomotive-scroll.css",
+      "local": "assets/css/locomotive-scroll_80048.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/DSC07033-Cut-Color-1080.jpg",
+      "local": "assets\\images\\DSC07033-Cut-Color-1080_66946.jpg",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/dotted.svg",
+      "local": "assets\\images\\dotted_88696.svg",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/css/components.css",
+      "local": "assets/css/components_17646.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/fonts/NeueMontreal-Light.otf",
+      "local": "assets\\fonts\\NeueMontreal-Light_12891.otf",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/fonts/NeueMontreal-LightItalic.otf",
+      "local": "assets\\fonts\\NeueMontreal-LightItalic_72495.otf",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/fonts/NeueMontreal-Regular.otf",
+      "local": "assets\\fonts\\NeueMontreal-Regular_09893.otf",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/fonts/NeueMontreal-Italic.otf",
+      "local": "assets\\fonts\\NeueMontreal-Italic_78615.otf",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/fonts/NeueMontreal-Bold.otf",
+      "local": "assets\\fonts\\NeueMontreal-Bold_71816.otf",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/fonts/NeueMontreal-BoldItalic.otf",
+      "local": "assets\\fonts\\NeueMontreal-BoldItalic_80312.otf",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/form-checkmark.svg",
+      "local": "assets\\images\\form-checkmark_37214.svg",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/css/styleguide.css",
+      "local": "assets/css/styleguide_75677.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/css/normalize.css",
+      "local": "assets/css/normalize_45342.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/DSC07033.jpg",
+      "local": "assets/images/DSC07033_34175.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/home-item-7.mp4",
+      "local": "assets/videos/home-item-7_49557.mp4",
+      "type": "video"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/home-item-5.mp4",
+      "local": "assets/videos/home-item-5_57863.mp4",
+      "type": "video"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/home-item-4.mp4",
+      "local": "assets/videos/home-item-4_68515.mp4",
+      "type": "video"
+    },
+    {
+      "url": "https://dennissnellenberg.com/assets/img/home-item-2.mp4",
+      "local": "assets/videos/home-item-2_31217.mp4",
+      "type": "video"
+    }
+  ]
+}

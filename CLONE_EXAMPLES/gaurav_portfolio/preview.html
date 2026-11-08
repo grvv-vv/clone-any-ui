@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head><meta name="referrer" content="no-referrer">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaurav — AI Engineer Portfolio &amp; Route Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #09090b; color: #f4f4f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .tab-btn.active {
+      background-color: #ffffff;
+      color: #000000;
+      font-weight: 700;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .viewport-btn.active {
+      background-color: #27272a;
+      color: #ffffff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="h-screen flex flex-col overflow-hidden font-sans antialiased select-none">
+  <!-- Top Navigation & Route Switcher -->
+  <header class="h-16 border-b border-white/10 bg-zinc-950 px-6 flex items-center justify-between shrink-0 z-50">
+    <div class="flex items-center gap-3">
+      <div class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+      </div>
+      <div>
+        <h1 class="text-sm font-bold tracking-tight text-white flex items-center gap-2">
+          Gaurav <span class="text-zinc-500 font-normal">/</span> Portfolio
+        </h1>
+        <p class="text-[11px] text-zinc-400">AI Engineer &amp; Systems Architecture</p>
+      </div>
+    </div>
+
+    <!-- Interactive Route Tabs -->
+    <nav class="flex items-center gap-1 bg-zinc-900/90 border border-white/10 p-1 rounded-xl shadow-inner">
+      <button class="tab-btn active text-xs px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5" data-target="./site/index.html">
+        <span>About</span>
+      </button>
+      <button class="tab-btn text-xs px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5" data-target="./site/projects/index.html">
+        <span>Projects</span>
+        <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.2 rounded font-mono font-medium">129 works · 41 vids</span>
+      </button>
+      <button class="tab-btn text-xs px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5" data-target="./site/engineering/index.html">
+        <span>&amp; Engineering</span>
+        <span class="text-[10px] bg-sky-500/20 text-sky-400 px-1.5 py-0.2 rounded font-mono font-medium">Interactive</span>
+      </button>
+      <button class="tab-btn text-xs px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-white transition-all flex items-center gap-1.5" data-target="./site/projects/yescheff/index.html">
+        <span>YesCheff</span>
+        <span class="text-[10px] bg-purple-500/20 text-purple-400 px-1.5 py-0.2 rounded font-mono font-medium">Case Study</span>
+      </button>
+    </nav>
+
+    <!-- Viewport Mode & External Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Device Viewport Switcher -->
+      <div class="hidden md:flex items-center gap-1 bg-zinc-900/80 border border-white/10 p-1 rounded-lg text-xs">
+        <button class="viewport-btn active px-2.5 py-1 rounded text-zinc-400 hover:text-white transition-all" data-width="100%" title="Responsive Desktop">
+          Desktop
+        </button>
+        <button class="viewport-btn px-2.5 py-1 rounded text-zinc-400 hover:text-white transition-all" data-width="1024px" title="Laptop 1024px">
+          Laptop
+        </button>
+        <button class="viewport-btn px-2.5 py-1 rounded text-zinc-400 hover:text-white transition-all" data-width="768px" title="Tablet 768px">
+          Tablet
+        </button>
+        <button class="viewport-btn px-2.5 py-1 rounded text-zinc-400 hover:text-white transition-all" data-width="390px" title="Mobile iPhone 390px">
+          Mobile
+        </button>
+      </div>
+
+      <!-- Open Direct Link -->
+      <a id="externalLink" href="./site/index.html" target="_blank" class="text-xs font-semibold bg-white hover:bg-zinc-200 text-black px-3.5 py-1.5 rounded-lg transition-all shadow-sm flex items-center gap-1.5">
+        <span>Open Standalone</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Live Multi-Page Viewport Frame Container -->
+  <main class="flex-1 bg-zinc-950/80 flex items-center justify-center relative overflow-hidden p-0">
+    <div id="frameWrapper" class="w-full h-full transition-all duration-300 ease-out flex items-center justify-center">
+      <iframe id="mainFrame" name="mainFrame" src="./site/index.html" class="w-full h-full border-none bg-black transition-all"></iframe>
+    </div>
+  </main>
+
+  <script>
+    const iframe = document.getElementById('mainFrame');
+    const frameWrapper = document.getElementById('frameWrapper');
+    const extLink = document.getElementById('externalLink');
+    const tabs = document.querySelectorAll('.tab-btn');
+    const vpButtons = document.querySelectorAll('.viewport-btn');
+
+    // Route Switching
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const targetUrl = tab.dataset.target;
+        iframe.src = targetUrl;
+        extLink.href = targetUrl;
+      });
+    });
+
+    // Global Key Listener for Preview Hub
+    window.addEventListener('keydown', (e) => {
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+      if (e.key === '1') tabs[0]?.click();
+      if (e.key === '2') tabs[1]?.click();
+      if (e.key === '3') tabs[2]?.click();
+      if (e.key === '4') tabs[3]?.click();
+    });
+
+    // Viewport Mode Switching
+    vpButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        vpButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const width = btn.dataset.width;
+        if (width === '100%') {
+          frameWrapper.style.maxWidth = '100%';
+          frameWrapper.style.boxShadow = 'none';
+          frameWrapper.style.borderRadius = '0';
+        } else {
+          frameWrapper.style.maxWidth = width;
+          frameWrapper.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1)';
+          frameWrapper.style.borderRadius = '16px';
+        }
+      });
+    });
+
+    // Sync tab when iframe changes route internally
+    iframe.addEventListener('load', () => {
+      try {
+        const curPath = iframe.contentWindow.location.pathname.replace(/\\/g, '/');
+        tabs.forEach(tab => {
+          const target = tab.dataset.target.replace('./site/', '').replace('/index.html', '');
+          if (curPath.endsWith(target) || (target === 'index.html' && (curPath.endsWith('site/') || curPath.endsWith('site/index.html')))) {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            extLink.href = tab.dataset.target;
+          }
+        });
+      } catch (e) {}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+{
+  "source_url": "https://brittanychiang.com/",
+  "assets": [
+    {
+      "url": "https://brittanychiang.com/images/koroks/Elma.png",
+      "local": "assets\\images\\Elma_76312.png",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/730e8169368baf37-s.p.woff2",
+      "local": "assets\\fonts\\730e8169368baf37-s.p_28532.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/f1f0c35b32161446-s.p.woff2",
+      "local": "assets\\fonts\\f1f0c35b32161446-s.p_53484.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/d593a8df799d4ab1-s.p.woff2",
+      "local": "assets\\fonts\\d593a8df799d4ab1-s.p_07634.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/dc792b508e6f91c7-s.p.woff2",
+      "local": "assets\\fonts\\dc792b508e6f91c7-s.p_86574.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/84d3493a9fd22f1c-s.p.woff2",
+      "local": "assets\\fonts\\84d3493a9fd22f1c-s.p_85039.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/fcb100c7607696fd-s.p.woff2",
+      "local": "assets\\fonts\\fcb100c7607696fd-s.p_67466.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/d90f295d0c348006-s.p.woff2",
+      "local": "assets\\fonts\\d90f295d0c348006-s.p_43132.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/579e0f95cacfae57-s.p.woff2",
+      "local": "assets\\fonts\\579e0f95cacfae57-s.p_29623.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/media/828a494e04a45cbd-s.p.woff2",
+      "local": "assets\\fonts\\828a494e04a45cbd-s.p_55720.woff2",
+      "type": "css-subresource"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/static/css/1205f04d95fac248.css",
+      "local": "assets/css/1205f04d95fac248_13034.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&amp;w=640&amp;q=75",
+      "local": "assets/images/image_50645.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fa11y.png&amp;w=640&amp;q=75",
+      "local": "assets/images/image_04127.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fai-parade.png&amp;w=640&amp;q=75",
+      "local": "assets/images/image_69480.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fspotify-profile.png&amp;w=640&amp;q=75",
+      "local": "assets/images/image_84246.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fv4.png&amp;w=640&amp;q=75",
+      "local": "assets/images/image_33728.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&amp;w=640&amp;q=75",
+      "local": "assets/images/image_35932.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fheadless.jpeg&amp;w=640&amp;q=75",
+      "local": "assets/images/image_84357.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Ftardis%2Frotate.gif&amp;w=256&amp;q=75",
+      "local": "assets/images/image_80819.webp",
+      "type": "image"
+    },
+    {
+      "url": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Falgolia-search.jpeg&amp;w=640&amp;q=75",
+      "local": "assets/images/image_69773.webp",
+      "type": "image"
+    }
+  ]
+}

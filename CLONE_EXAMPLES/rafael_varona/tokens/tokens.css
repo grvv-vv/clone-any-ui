@@ -1,0 +1,147 @@
+:root {
+  /* Original CSS Custom Properties */
+  --scrollbar-width: 15px;
+  --one-unit: 1cqw;
+  --section-max-width: 9999px;
+  --spx-stopper-max: 9999px;
+  --spx-stopper-min: 0px;
+  --browser-zoom: 1;
+  --safari-sticky-fix: opacity;
+  --experimental-safari-sticky-fix: translateZ(0);
+  --wst-button-color-fill-primary: rgb(var(--color_48));
+  --wst-button-color-border-primary: rgb(var(--color_49));
+  --wst-button-color-text-primary: rgb(var(--color_50));
+  --wst-button-color-fill-primary-hover: rgb(var(--color_51));
+  --wst-button-color-border-primary-hover: rgb(var(--color_52));
+  --wst-button-color-text-primary-hover: rgb(var(--color_53));
+  --wst-button-color-fill-primary-disabled: rgb(var(--color_54));
+  --wst-button-color-border-primary-disabled: rgb(var(--color_55));
+  --wst-button-color-text-primary-disabled: rgb(var(--color_56));
+  --wst-button-color-fill-secondary: rgb(var(--color_57));
+  --wst-button-color-border-secondary: rgb(var(--color_58));
+  --wst-button-color-text-secondary: rgb(var(--color_59));
+  --wst-button-color-fill-secondary-hover: rgb(var(--color_60));
+  --wst-button-color-border-secondary-hover: rgb(var(--color_61));
+  --wst-button-color-text-secondary-hover: rgb(var(--color_62));
+  --wst-button-color-fill-secondary-disabled: rgb(var(--color_63));
+  --wst-button-color-border-secondary-disabled: rgb(var(--color_64));
+  --wst-button-color-text-secondary-disabled: rgb(var(--color_65));
+  --wst-color-fill-base-1: rgb(var(--color_36));
+  --wst-color-fill-base-2: rgb(var(--color_37));
+  --wst-color-fill-base-shade-1: rgb(var(--color_38));
+  --wst-color-fill-base-shade-2: rgb(var(--color_39));
+  --wst-color-fill-base-shade-3: rgb(var(--color_40));
+  --wst-color-fill-accent-1: rgb(var(--color_41));
+  --wst-color-fill-accent-2: rgb(var(--color_42));
+  --wst-color-fill-accent-3: rgb(var(--color_43));
+  --wst-color-fill-accent-4: rgb(var(--color_44));
+  --wst-color-fill-background-primary: rgb(var(--color_11));
+  --wst-color-fill-background-secondary: rgb(var(--color_12));
+  --wst-color-text-primary: rgb(var(--color_15));
+  --wst-color-text-secondary: rgb(var(--color_14));
+  --wst-color-action: rgb(var(--color_18));
+
+  /* Synthesized Design Tokens */
+  --color-brand-1: #2b5672;
+  --color-brand-2: #116dff;
+  --color-brand-3: #e03939;
+  --color-brand-4: #4eb7f5;
+  --color-brand-5: #0f2ccf;
+  --color-neutral-1: #414141;
+  --color-neutral-2: #5d5d61;
+  --color-neutral-3: #e8e6e6;
+  --color-neutral-4: #5f6360;
+  --color-neutral-5: #eaefff;
+  --font-primary: open-sans-v2;
+
+  /* Motion & Spring Physics */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-smooth-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-normal: 300ms;
+  --duration-fast: 150ms;
+}
+
+/* --- Extracted & Baseline Keyframes --- */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes accordion-down {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: var(--radix-accordion-content-height, auto);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  0% {
+    height: var(--radix-accordion-content-height, auto);
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}

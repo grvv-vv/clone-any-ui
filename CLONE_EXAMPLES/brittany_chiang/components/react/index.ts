@@ -1,0 +1,9 @@
+export { FeaturesSection_1 } from './FeaturesSection_1';
+export { FeaturesSection_2 } from './FeaturesSection_2';
+export { FeaturesSection_3 } from './FeaturesSection_3';
+export { FeaturesSection_4 } from './FeaturesSection_4';
+export { FeaturesSection_5 } from './FeaturesSection_5';
+export { FeaturesSection_6 } from './FeaturesSection_6';
+export { FeaturesSection_7 } from './FeaturesSection_7';
+export { FooterSection_8 } from './FooterSection_8';
+export { FooterSection_9 } from './FooterSection_9';

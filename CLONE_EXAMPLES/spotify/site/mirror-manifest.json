@@ -1,0 +1,347 @@
+{
+  "source_url": "https://open.spotify.com",
+  "assets": [
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02086eaed38ba9a780c1d9371a",
+      "local": "https://i.scdn.co/image/ab67616d00001e02086eaed38ba9a780c1d9371a",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616100005174adfb0b2df04b77e43b5f7375",
+      "local": "https://i.scdn.co/image/ab67616100005174adfb0b2df04b77e43b5f7375",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab676161000051740f0be2054fe9594026a6b843",
+      "local": "https://i.scdn.co/image/ab676161000051740f0be2054fe9594026a6b843",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://open.spotifycdn.com/cdn/images/ylx-compact-row-placeholder.9a165ac8.webp",
+      "local": "https://open.spotifycdn.com/cdn/images/ylx-compact-row-placeholder.9a165ac8.webp",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e0285a09efa7b28fd0715932d1d",
+      "local": "https://i.scdn.co/image/ab67616d00001e0285a09efa7b28fd0715932d1d",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84",
+      "local": "https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02e2468b20c014353238e13af0",
+      "local": "https://i.scdn.co/image/ab67616d00001e02e2468b20c014353238e13af0",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e026404721c1943d5069f0805f3",
+      "local": "https://i.scdn.co/image/ab67616d00001e026404721c1943d5069f0805f3",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca",
+      "local": "https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4K6blSRoklNdpw4mzLxwfn/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4K6blSRoklNdpw4mzLxwfn/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/1mYsTxnqsietFxj1OgoGbG/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/1mYsTxnqsietFxj1OgoGbG/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e028afb336aa3aec47f9fa77f9c",
+      "local": "https://i.scdn.co/image/ab67616d00001e028afb336aa3aec47f9fa77f9c",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02292341cd3e621d7f9171331f",
+      "local": "https://i.scdn.co/image/ab67616d00001e02292341cd3e621d7f9171331f",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02bf6c7c24a33a49a5c2f0d423",
+      "local": "https://i.scdn.co/image/ab67616d00001e02bf6c7c24a33a49a5c2f0d423",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_in_default.jpg",
+      "local": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_in_default.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+      "local": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e028273dc599ca9bb9e4d5f556d",
+      "local": "https://i.scdn.co/image/ab67616d00001e028273dc599ca9bb9e4d5f556d",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/3gBKY0y3dFFVRqicLnVZYz/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/3gBKY0y3dFFVRqicLnVZYz/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4fEkbug6kZzzJ8eYX6Kbbp/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4fEkbug6kZzzJ8eYX6Kbbp/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e0252b0bfea4b0c157422fe2f82",
+      "local": "https://i.scdn.co/image/ab67616d00001e0252b0bfea4b0c157422fe2f82",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02277969f81c234174b38100bb",
+      "local": "https://i.scdn.co/image/ab67616d00001e02277969f81c234174b38100bb",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0oOet2f43PA68X5RxKobEy/en-GB",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0oOet2f43PA68X5RxKobEy/en-GB",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ce643886a6df8f7a06526700",
+      "local": "https://i.scdn.co/image/ab67616d00001e02ce643886a6df8f7a06526700",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ce1f4349305971b5beb75fcd",
+      "local": "https://i.scdn.co/image/ab67616d00001e02ce1f4349305971b5beb75fcd",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e021aa5adad8593923dcdf1a7d0",
+      "local": "https://i.scdn.co/image/ab67616d00001e021aa5adad8593923dcdf1a7d0",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02990efdecfa312b16d78d96f1",
+      "local": "https://i.scdn.co/image/ab67616d00001e02990efdecfa312b16d78d96f1",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/7uIbLdzzSEqnX0Pkrb56cR/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/7uIbLdzzSEqnX0Pkrb56cR/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616100005174bb4064bef3a825344d5eb79e",
+      "local": "https://i.scdn.co/image/ab67616100005174bb4064bef3a825344d5eb79e",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e0264c4d12fada3cacc81f11daa",
+      "local": "https://i.scdn.co/image/ab67616d00001e0264c4d12fada3cacc81f11daa",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02773c5f60bcb309ef8802e4ef",
+      "local": "https://i.scdn.co/image/ab67616d00001e02773c5f60bcb309ef8802e4ef",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e026e9e64025043feb3999aa13b",
+      "local": "https://i.scdn.co/image/ab67616d00001e026e9e64025043feb3999aa13b",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg",
+      "local": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02dc037345b1f3908273425840",
+      "local": "https://i.scdn.co/image/ab67616d00001e02dc037345b1f3908273425840",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e028e1bd9f2ca754ace0396d72f",
+      "local": "https://i.scdn.co/image/ab67616d00001e028e1bd9f2ca754ace0396d72f",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://cdn.cookielaw.org/logos/static/ot_company_logo.png",
+      "local": "https://cdn.cookielaw.org/logos/static/ot_company_logo.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab676161000051743db0499a689aa9b4a47ebba3",
+      "local": "https://i.scdn.co/image/ab676161000051743db0499a689aa9b4a47ebba3",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4PULA4EFzYTrxYvOVlwpiQ/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4PULA4EFzYTrxYvOVlwpiQ/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e027838ccbef3fb712228e23fc5",
+      "local": "https://i.scdn.co/image/ab67616d00001e027838ccbef3fb712228e23fc5",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02707ea5b8023ac77d31756ed4",
+      "local": "https://i.scdn.co/image/ab67616d00001e02707ea5b8023ac77d31756ed4",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://open.spotify.com/&quot;https:/cdn.cookielaw.org/logos/static/ot_close.svg&quot",
+      "local": "https://open.spotify.com/&quot;https:/cdn.cookielaw.org/logos/static/ot_close.svg&quot",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e0227af4c2d6f7a7286e6cc4774",
+      "local": "https://i.scdn.co/image/ab67616d00001e0227af4c2d6f7a7286e6cc4774",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab676161000051740d980c444c93fded5715e1b4",
+      "local": "https://i.scdn.co/image/ab676161000051740d980c444c93fded5715e1b4",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02b74da8a5da3ae6ff394d61f6",
+      "local": "https://i.scdn.co/image/ab67616d00001e02b74da8a5da3ae6ff394d61f6",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02e0e907b4431095575810860a",
+      "local": "https://i.scdn.co/image/ab67616d00001e02e0e907b4431095575810860a",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02711c1639b4bc0f9978ae77a6",
+      "local": "https://i.scdn.co/image/ab67616d00001e02711c1639b4bc0f9978ae77a6",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg",
+      "local": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0GF4shudTAFv8ak9eWdd4Y/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0GF4shudTAFv8ak9eWdd4Y/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_default.jpg",
+      "local": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_default.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ef8ff7f32bc8da67754ab9b0",
+      "local": "https://i.scdn.co/image/ab67616d00001e02ef8ff7f32bc8da67754ab9b0",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4YRxDV8wJFPHPTeXepOstw/en-GB",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4YRxDV8wJFPHPTeXepOstw/en-GB",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02a5183fa4b99bcec1f506418d",
+      "local": "https://i.scdn.co/image/ab67616d00001e02a5183fa4b99bcec1f506418d",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/2FKWNmZWDBZR4dE5KX4plR/en",
+      "local": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/2FKWNmZWDBZR4dE5KX4plR/en",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab6761610000517490b6c3d093f9b02aad628eaf",
+      "local": "https://i.scdn.co/image/ab6761610000517490b6c3d093f9b02aad628eaf",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e0278251330df407f7a8c3d29fb",
+      "local": "https://i.scdn.co/image/ab67616d00001e0278251330df407f7a8c3d29fb",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c",
+      "local": "https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab676161000051748de0e6e7e55d7773931ab7f4",
+      "local": "https://i.scdn.co/image/ab676161000051748de0e6e7e55d7773931ab7f4",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02d9ec72f6881955432b329f32",
+      "local": "https://i.scdn.co/image/ab67616d00001e02d9ec72f6881955432b329f32",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "source_url": "https://www.rafaelvarona.com/",
+  "assets": [
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_df4761767b5b4c04abb9425a57381f1d~mv2.jpg/v1/fit/w_480,h_363,q_90,enc_avif,quality_auto/e0554b_df4761767b5b4c04abb9425a57381f1d~mv2.jpg",
+      "local": "assets/images/e0554b_df4761767b5b4c04a_37856.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_c184e8763df149da8f78bb7a66613ee4~mv2.gif/v1/fit/w_480,h_596,q_90,enc_avif,quality_auto/e0554b_c184e8763df149da8f78bb7a66613ee4~mv2.gif",
+      "local": "assets/images/e0554b_c184e8763df149da8_86692.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_60b902725da049eab379e15ff762fc14~mv2.gif/v1/fit/w_480,h_491,q_90,enc_avif,quality_auto/e0554b_60b902725da049eab379e15ff762fc14~mv2.gif",
+      "local": "assets/images/e0554b_60b902725da049eab_94084.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_73651e68e1f94a4c8cfd6a6475dca11a~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_73651e68e1f94a4c8cfd6a6475dca11a~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_41afc3148ee940dfb6324b1af6ec2bef~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_41afc3148ee940dfb6324b1af6ec2bef~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/fc0bbd_647bc5e9acfd44798a94613c6e7f294e~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/fc0bbd_647bc5e9acfd44798a94613c6e7f294e~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_be9a3e17c5c4453cab87d541223144ea~mv2.png/v1/fit/w_480,h_480,q_90,enc_avif,quality_auto/e0554b_be9a3e17c5c4453cab87d541223144ea~mv2.png",
+      "local": "assets/images/e0554b_be9a3e17c5c4453ca_12784.png",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_c184e8763df149da8f78bb7a66613ee4~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_c184e8763df149da8f78bb7a66613ee4~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_8e200b6a2a2c4be5b7dfa7b335182c78~mv2.jpg/v1/fill/w_30,h_30,al_c,q_80,enc_avif,quality_auto/e0554b_8e200b6a2a2c4be5b7dfa7b335182c78~mv2.jpg",
+      "local": "assets/images/e0554b_8e200b6a2a2c4be5b_43346.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_b35730ceddc74b1d9f1b403912685054~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_b35730ceddc74b1d9f1b403912685054~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_c3e3fa3c46714d52b9b835e8cff02c19~mv2.gif/v1/fit/w_480,h_480,q_90,enc_avif,quality_auto/e0554b_c3e3fa3c46714d52b9b835e8cff02c19~mv2.gif",
+      "local": "assets/images/e0554b_c3e3fa3c46714d52b_11495.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_0141b5faffd249a2903c013eb2e5e059~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_0141b5faffd249a2903c013eb2e5e059~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_b35730ceddc74b1d9f1b403912685054~mv2.gif/v1/fit/w_480,h_480,q_90,enc_avif,quality_auto/e0554b_b35730ceddc74b1d9f1b403912685054~mv2.gif",
+      "local": "assets/images/e0554b_b35730ceddc74b1d9_03203.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_60b902725da049eab379e15ff762fc14~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_60b902725da049eab379e15ff762fc14~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_f5c5132f5ada44b7bb500edc97ca4aaf~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_f5c5132f5ada44b7bb500edc97ca4aaf~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_3163906693d14b2e87dd86b564ffd067~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_3163906693d14b2e87dd86b564ffd067~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_8e200b6a2a2c4be5b7dfa7b335182c78~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_8e200b6a2a2c4be5b7dfa7b335182c78~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_d47664b831494600b80548484f15985b~mv2.png/v1/fit/w_480,h_686,q_90,enc_avif,quality_auto/e0554b_d47664b831494600b80548484f15985b~mv2.png",
+      "local": "assets/images/e0554b_d47664b831494600b_01178.png",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_c3e3fa3c46714d52b9b835e8cff02c19~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_c3e3fa3c46714d52b9b835e8cff02c19~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_80d3c9adafb84de7b023c5e5848936cc~mv2.png/v1/fit/w_480,h_610,q_90,enc_avif,quality_auto/e0554b_80d3c9adafb84de7b023c5e5848936cc~mv2.png",
+      "local": "assets/images/e0554b_80d3c9adafb84de7b_49132.png",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_6f173c15fee94b4c8c41f5b7df37234c~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_6f173c15fee94b4c8c41f5b7df37234c~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_43a5baf4567240bc9a5184e10eeeb8c9~mv2.jpg/v1/fit/w_480,h_691,q_90,enc_avif,quality_auto/e0554b_43a5baf4567240bc9a5184e10eeeb8c9~mv2.jpg",
+      "local": "assets/images/e0554b_43a5baf4567240bc9_80039.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_6706c0d5651144fdb0ae43a9859d65dd~mv2.gif/v1/fit/w_480,h_480,q_90,enc_avif,quality_auto/e0554b_6706c0d5651144fdb0ae43a9859d65dd~mv2.gif",
+      "local": "assets/images/e0554b_6706c0d5651144fdb_56277.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/&quot;https:/static.wixstatic.com/media/0da768_880a3209e3744cd0a96b66835a01b8c5.png/v1/crop/x_0,y_0,w_256,h_256,q_85,enc_auto/0da768_880a3209e3744cd0a96b66835a01b8c5.png&quot",
+      "local": "https://www.rafaelvarona.com/&quot;https:/static.wixstatic.com/media/0da768_880a3209e3744cd0a96b66835a01b8c5.png/v1/crop/x_0,y_0,w_256,h_256,q_85,enc_auto/0da768_880a3209e3744cd0a96b66835a01b8c5.png&quot",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/fc0bbd_647bc5e9acfd44798a94613c6e7f294e~mv2.png/v1/fill/w_30,h_30,al_c,q_85,enc_avif,quality_auto/fc0bbd_647bc5e9acfd44798a94613c6e7f294e~mv2.png",
+      "local": "assets/images/fc0bbd_647bc5e9acfd44798_29960.png",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_5820f26e8c46489392ca1bbbc21cf3ac~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_5820f26e8c46489392ca1bbbc21cf3ac~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_d47664b831494600b80548484f15985b~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_d47664b831494600b80548484f15985b~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_30f71aab85d042d2bd0fce3ff5d26449~mv2.gif/v1/fit/w_480,h_480,q_90,enc_avif,quality_auto/e0554b_30f71aab85d042d2bd0fce3ff5d26449~mv2.gif",
+      "local": "assets/images/e0554b_30f71aab85d042d2b_21596.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_62063d094544418d8161fd4d0353a958~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_62063d094544418d8161fd4d0353a958~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_95fc6765254a4360a63e5954c5792554f000.jpg/v1/fill/w_1136,h_1050,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/e0554b_95fc6765254a4360a63e5954c5792554f000.jpg",
+      "local": "assets/images/e0554b_95fc6765254a4360a_41310.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/fc0bbd_053f95eac4d64d01821257b62d17bc06~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/fc0bbd_053f95eac4d64d01821257b62d17bc06~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_56305e36a1e046f6bdd7dff019f18497~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_56305e36a1e046f6bdd7dff019f18497~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_41afc3148ee940dfb6324b1af6ec2bef~mv2.gif/v1/fit/w_417,h_417,q_90,enc_avif,quality_auto/e0554b_41afc3148ee940dfb6324b1af6ec2bef~mv2.gif",
+      "local": "assets/images/e0554b_41afc3148ee940dfb_53215.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_908a745ba61342848441f408666cecf4~mv2.jpg/v1/fit/w_480,h_421,q_90,enc_avif,quality_auto/e0554b_908a745ba61342848441f408666cecf4~mv2.jpg",
+      "local": "assets/images/e0554b_908a745ba61342848_15614.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_908a745ba61342848441f408666cecf4~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_908a745ba61342848441f408666cecf4~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_220216d0f5d748e19b3e89cfe81336bc~mv2.gif/v1/fit/w_480,h_396,q_90,enc_avif,quality_auto/e0554b_220216d0f5d748e19b3e89cfe81336bc~mv2.gif",
+      "local": "assets/images/e0554b_220216d0f5d748e19_34716.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/fc0bbd_b596345f91db4c3e8e8e131907c7c68c~mv2.gif",
+      "local": "assets/images/fc0bbd_b596345f91db4c3e8_46075.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_73651e68e1f94a4c8cfd6a6475dca11a~mv2.gif/v1/fit/w_474,h_540,q_90,enc_avif,quality_auto/e0554b_73651e68e1f94a4c8cfd6a6475dca11a~mv2.gif",
+      "local": "assets/images/e0554b_73651e68e1f94a4c8_33467.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_6e1954f71ce2409c96f694dc6c53cfb6~mv2.gif/v1/fit/w_480,h_672,q_90,enc_avif,quality_auto/e0554b_6e1954f71ce2409c96f694dc6c53cfb6~mv2.gif",
+      "local": "assets/images/e0554b_6e1954f71ce2409c9_69079.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_56305e36a1e046f6bdd7dff019f18497~mv2.png/v1/fit/w_480,h_601,q_90,enc_avif,quality_auto/e0554b_56305e36a1e046f6bdd7dff019f18497~mv2.png",
+      "local": "assets/images/e0554b_56305e36a1e046f6b_22445.png",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_4620695f66914cb4898eb21a30ccf510~mv2.jpg/v1/fill/w_30,h_30,al_c,q_80,enc_avif,quality_auto/e0554b_4620695f66914cb4898eb21a30ccf510~mv2.jpg",
+      "local": "assets/images/e0554b_4620695f66914cb48_70290.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_f00ff3407b6742a89344fa1b8451e066~mv2.gif",
+      "local": "assets/images/e0554b_f00ff3407b6742a89_64655.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_6e1954f71ce2409c96f694dc6c53cfb6~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_6e1954f71ce2409c96f694dc6c53cfb6~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_6f173c15fee94b4c8c41f5b7df37234c~mv2.gif/v1/fit/w_480,h_804,q_90,enc_avif,quality_auto/e0554b_6f173c15fee94b4c8c41f5b7df37234c~mv2.gif",
+      "local": "assets/images/e0554b_6f173c15fee94b4c8_62415.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_220216d0f5d748e19b3e89cfe81336bc~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_220216d0f5d748e19b3e89cfe81336bc~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_3116c2d6a8a5425791f3573f4c090608~mv2.jpg/v1/fit/w_400,h_390,q_90,enc_avif,quality_auto/e0554b_3116c2d6a8a5425791f3573f4c090608~mv2.jpg",
+      "local": "assets/images/e0554b_3116c2d6a8a542579_29005.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_3116c2d6a8a5425791f3573f4c090608~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_3116c2d6a8a5425791f3573f4c090608~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/fc0bbd_3a980be4d811410a8317c188178ec7fe~mv2.png/v1/fill/w_30,h_30,al_c,q_85,enc_avif,quality_auto/fc0bbd_3a980be4d811410a8317c188178ec7fe~mv2.png",
+      "local": "assets/images/fc0bbd_3a980be4d811410a8_95861.png",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_43a5baf4567240bc9a5184e10eeeb8c9~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_43a5baf4567240bc9a5184e10eeeb8c9~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_f234c2b72829495381a1c7791ca4cab3~mv2.jpg/v1/fill/w_30,h_30,al_c,q_80,enc_avif,quality_auto/e0554b_f234c2b72829495381a1c7791ca4cab3~mv2.jpg",
+      "local": "assets/images/e0554b_f234c2b7282949538_98440.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_30f71aab85d042d2bd0fce3ff5d26449~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_30f71aab85d042d2bd0fce3ff5d26449~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_0141b5faffd249a2903c013eb2e5e059~mv2.jpg/v1/fit/w_480,h_688,q_90,enc_avif,quality_auto/e0554b_0141b5faffd249a2903c013eb2e5e059~mv2.jpg",
+      "local": "assets/images/e0554b_0141b5faffd249a29_00293.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_f234c2b72829495381a1c7791ca4cab3~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_f234c2b72829495381a1c7791ca4cab3~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_e5a1faf4c0634da5899b4af0a23679e8~mv2.jpg/v1/fit/w_480,h_763,q_90,enc_avif,quality_auto/e0554b_e5a1faf4c0634da5899b4af0a23679e8~mv2.jpg",
+      "local": "assets/images/e0554b_e5a1faf4c0634da58_66977.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_e5a1faf4c0634da5899b4af0a23679e8~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_e5a1faf4c0634da5899b4af0a23679e8~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/fc0bbd_3a980be4d811410a8317c188178ec7fe~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/fc0bbd_3a980be4d811410a8317c188178ec7fe~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_be9a3e17c5c4453cab87d541223144ea~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_be9a3e17c5c4453cab87d541223144ea~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_3163906693d14b2e87dd86b564ffd067~mv2.png/v1/fit/w_427,h_398,q_90,enc_avif,quality_auto/e0554b_3163906693d14b2e87dd86b564ffd067~mv2.png",
+      "local": "assets/images/e0554b_3163906693d14b2e8_15094.png",
+      "type": "image"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/fc0bbd_053f95eac4d64d01821257b62d17bc06~mv2.png/v1/fill/w_30,h_30,al_c,q_85,enc_avif,quality_auto/fc0bbd_053f95eac4d64d01821257b62d17bc06~mv2.png",
+      "local": "assets/images/fc0bbd_053f95eac4d64d018_20240.png",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_4620695f66914cb4898eb21a30ccf510~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_4620695f66914cb4898eb21a30ccf510~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_f5c5132f5ada44b7bb500edc97ca4aaf~mv2.jpg/v1/fit/w_480,h_914,q_90,enc_avif,quality_auto/e0554b_f5c5132f5ada44b7bb500edc97ca4aaf~mv2.jpg",
+      "local": "assets/images/e0554b_f5c5132f5ada44b7b_75573.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_6706c0d5651144fdb0ae43a9859d65dd~mv2.gif",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_6706c0d5651144fdb0ae43a9859d65dd~mv2.gif",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_62063d094544418d8161fd4d0353a958~mv2.jpg/v1/fit/w_480,h_625,q_90,enc_avif,quality_auto/e0554b_62063d094544418d8161fd4d0353a958~mv2.jpg",
+      "local": "assets/images/e0554b_62063d094544418d8_85465.jpg",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_df4761767b5b4c04abb9425a57381f1d~mv2.jpg",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_df4761767b5b4c04abb9425a57381f1d~mv2.jpg",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e0554b_5820f26e8c46489392ca1bbbc21cf3ac~mv2.gif/v1/fit/w_322,h_385,q_90,enc_avif,quality_auto/e0554b_5820f26e8c46489392ca1bbbc21cf3ac~mv2.gif",
+      "local": "assets/images/e0554b_5820f26e8c4648939_38078.gif",
+      "type": "image"
+    },
+    {
+      "url": "https://www.rafaelvarona.com/quality_auto/e0554b_80d3c9adafb84de7b023c5e5848936cc~mv2.png",
+      "local": "https://www.rafaelvarona.com/quality_auto/e0554b_80d3c9adafb84de7b023c5e5848936cc~mv2.png",
+      "type": "image-remote-exact",
+      "note": "Failed to download asset"
+    },
+    {
+      "url": "https://video.wixstatic.com/video/e0554b_95fc6765254a4360a63e5954c5792554/1080p/mp4/file.mp4",
+      "local": "assets/videos/file_11241.mp4",
+      "type": "video"
+    }
+  ]
+}

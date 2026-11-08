@@ -1,0 +1,18 @@
+{
+  "font_features": [],
+  "letter_spacings": [
+    "normal",
+    ".05em",
+    ".015em"
+  ],
+  "stacked_shadows": [
+    "rgba(0, 0, 0, 0.20) 0px 2px 5px !important"
+  ],
+  "selection_color": "var(--color-blue)",
+  "antialiased": true,
+  "text_wrap_balance": true,
+  "active_press": true,
+  "safe_area_insets": true,
+  "glassmorphism": false,
+  "hairline_borders": true
+}

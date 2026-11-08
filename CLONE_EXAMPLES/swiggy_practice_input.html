@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Food Online from India's Best Food Delivery Service | Swiggy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Basis+Grotesque+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-brand-primary: #fc8019;
+      --color-brand-primary-hover: #e56d09;
+      --color-brand-dark: #02060c;
+      --color-brand-surface: #ffffff;
+      --color-brand-muted: #686b78;
+      --color-brand-border: #e2e8f0;
+      --color-rating-green: #15803d;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+      --shadow-sm: 0 1px 3px rgba(2, 6, 12, 0.08);
+      --shadow-md: 0 4px 12px rgba(2, 6, 12, 0.12);
+      --shadow-hover: 0 12px 24px -4px rgba(2, 6, 12, 0.16);
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Basis Grotesque Pro', 'Inter', system-ui, sans-serif;
+      background-color: var(--color-brand-surface);
+      color: var(--color-brand-dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header / Navbar -->
+  <header class="swiggy-navbar" style="position: sticky; top: 0; z-index: 50; background: #ffffff; border-bottom: 1px solid var(--color-brand-border); box-shadow: var(--shadow-sm);">
+    <div class="container" style="display: flex; height: 80px; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="/" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+          <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="24" fill="#fc8019"/>
+            <path d="M50 15C36 15 25 26 25 40C25 58 46 80 50 84C54 80 75 58 75 40C75 26 64 15 50 15ZM50 50C44.5 50 40 45.5 40 40C40 34.5 44.5 30 50 30C55.5 30 60 34.5 60 40C60 45.5 55.5 50 50 50Z" fill="white"/>
+          </svg>
+          <span style="font-size: 24px; font-weight: 800; color: #fc8019; letter-spacing: -0.5px;">Swiggy</span>
+        </a>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #02060c; cursor: pointer;">
+          <span style="border-bottom: 2px solid #02060c; padding-bottom: 2px;">Other</span>
+          <span style="color: #686b78; font-weight: 400; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Bengaluru, Karnataka, India</span>
+          <span style="color: #fc8019; font-size: 12px;">▼</span>
+        </div>
+      </div>
+
+      <nav style="display: flex; align-items: center; gap: 36px; font-size: 15px; font-weight: 600; color: #3d4152;">
+        <a href="#corporate" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 6px;">
+          <span>💼</span> Swiggy Corporate
+        </a>
+        <a href="#search" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 6px;">
+          <span>🔍</span> Search
+        </a>
+        <a href="#offers" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 6px;">
+          <span>🏷️</span> Offers <span style="background: #fc8019; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 700;">NEW</span>
+        </a>
+        <a href="#help" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 6px;">
+          <span>🛟</span> Help
+        </a>
+        <a href="#signin" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 6px;">
+          <span>👤</span> Sign In
+        </a>
+        <a href="#cart" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 6px;">
+          <span>🛒</span> Cart
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section: Food Categories Carousel -->
+  <section class="swiggy-hero" style="padding: 40px 0 20px; background: #fafafa;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h1 style="font-size: 26px; font-weight: 800; color: #02060c; letter-spacing: -0.4px;">What's on your mind?</h1>
+        <div style="display: flex; gap: 12px;">
+          <button style="width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e2e8f0; background: #e2e8f0; cursor: pointer; font-size: 14px; font-weight: bold;">←</button>
+          <button style="width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e2e8f0; background: #e2e8f0; cursor: pointer; font-size: 14px; font-weight: bold;">→</button>
+        </div>
+      </div>
+
+      <!-- Categories Row with Real Dishes -->
+      <div style="display: flex; gap: 24px; overflow-x: auto; padding-bottom: 16px;">
+        <div style="min-width: 130px; text-align: center; cursor: pointer;" class="category-item">
+          <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=280&auto=format&fit=crop&q=80" alt="Biryani" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
+          <p style="margin-top: 10px; font-weight: 700; font-size: 15px; color: #3d4152;">Biryani</p>
+        </div>
+        <div style="min-width: 130px; text-align: center; cursor: pointer;" class="category-item">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=280&auto=format&fit=crop&q=80" alt="Pizza" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
+          <p style="margin-top: 10px; font-weight: 700; font-size: 15px; color: #3d4152;">Pizza</p>
+        </div>
+        <div style="min-width: 130px; text-align: center; cursor: pointer;" class="category-item">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=280&auto=format&fit=crop&q=80" alt="Burger" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
+          <p style="margin-top: 10px; font-weight: 700; font-size: 15px; color: #3d4152;">Burgers</p>
+        </div>
+        <div style="min-width: 130px; text-align: center; cursor: pointer;" class="category-item">
+          <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=280&auto=format&fit=crop&q=80" alt="North Indian" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
+          <p style="margin-top: 10px; font-weight: 700; font-size: 15px; color: #3d4152;">North Indian</p>
+        </div>
+        <div style="min-width: 130px; text-align: center; cursor: pointer;" class="category-item">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=280&auto=format&fit=crop&q=80" alt="South Indian Dosa" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
+          <p style="margin-top: 10px; font-weight: 700; font-size: 15px; color: #3d4152;">Dosa</p>
+        </div>
+        <div style="min-width: 130px; text-align: center; cursor: pointer;" class="category-item">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=280&auto=format&fit=crop&q=80" alt="Cake Desserts" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
+          <p style="margin-top: 10px; font-weight: 700; font-size: 15px; color: #3d4152;">Cakes & Desserts</p>
+        </div>
+        <div style="min-width: 130px; text-align: center; cursor: pointer;" class="category-item">
+          <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?w=280&auto=format&fit=crop&q=80" alt="Rolls & Wraps" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
+          <p style="margin-top: 10px; font-weight: 700; font-size: 15px; color: #3d4152;">Rolls</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Top Restaurant Chains Section -->
+  <section class="swiggy-top-chains" style="padding: 48px 0; border-top: 1px solid #f1f5f9;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
+        <h2 style="font-size: 24px; font-weight: 800; color: #02060c; letter-spacing: -0.3px;">Top restaurant chains in Bangalore</h2>
+        <div style="display: flex; gap: 12px;">
+          <button style="width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e2e8f0; background: #e2e8f0; cursor: pointer;">←</button>
+          <button style="width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e2e8f0; background: #e2e8f0; cursor: pointer;">→</button>
+        </div>
+      </div>
+
+      <!-- Restaurant Cards Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 32px;">
+        <!-- Card 1 -->
+        <div class="restaurant-card" style="cursor: pointer; transition: transform 0.3s var(--ease-spring);">
+          <div style="position: relative; width: 100%; height: 180px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm);">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format&fit=crop&q=80" alt="Pizza Hut" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(to top, rgba(2,6,12,0.85) 0%, transparent 100%); color: #fff; font-weight: 800; font-size: 19px; letter-spacing: -0.3px;">
+              ₹125 OFF ABOVE ₹249
+            </div>
+          </div>
+          <div style="padding: 12px 4px 0;">
+            <h3 style="font-size: 18px; font-weight: 700; color: #02060c;">Pizza Hut</h3>
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 15px; font-weight: 600;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #15803d; color: #fff; font-size: 11px;">★</span>
+              <span>4.2</span>
+              <span>•</span>
+              <span>30-35 mins</span>
+            </div>
+            <p style="color: #686b78; font-size: 14px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Pizzas, Fast Food, Pastas</p>
+            <p style="color: #686b78; font-size: 14px;">Koramangala</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="restaurant-card" style="cursor: pointer; transition: transform 0.3s var(--ease-spring);">
+          <div style="position: relative; width: 100%; height: 180px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm);">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&auto=format&fit=crop&q=80" alt="Burger King" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(to top, rgba(2,6,12,0.85) 0%, transparent 100%); color: #fff; font-weight: 800; font-size: 19px; letter-spacing: -0.3px;">
+              ITEMS AT ₹99
+            </div>
+          </div>
+          <div style="padding: 12px 4px 0;">
+            <h3 style="font-size: 18px; font-weight: 700; color: #02060c;">Burger King</h3>
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 15px; font-weight: 600;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #15803d; color: #fff; font-size: 11px;">★</span>
+              <span>4.3</span>
+              <span>•</span>
+              <span>25-30 mins</span>
+            </div>
+            <p style="color: #686b78; font-size: 14px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Burgers, American, Shakes</p>
+            <p style="color: #686b78; font-size: 14px;">Indiranagar</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="restaurant-card" style="cursor: pointer; transition: transform 0.3s var(--ease-spring);">
+          <div style="position: relative; width: 100%; height: 180px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm);">
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&auto=format&fit=crop&q=80" alt="Meghana Foods" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(to top, rgba(2,6,12,0.85) 0%, transparent 100%); color: #fff; font-weight: 800; font-size: 19px; letter-spacing: -0.3px;">
+              ₹100 OFF ABOVE ₹199
+            </div>
+          </div>
+          <div style="padding: 12px 4px 0;">
+            <h3 style="font-size: 18px; font-weight: 700; color: #02060c;">Meghana Foods</h3>
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 15px; font-weight: 600;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #15803d; color: #fff; font-size: 11px;">★</span>
+              <span>4.5</span>
+              <span>•</span>
+              <span>20-25 mins</span>
+            </div>
+            <p style="color: #686b78; font-size: 14px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Biryani, Andhra, South Indian</p>
+            <p style="color: #686b78; font-size: 14px;">BTM Layout</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="restaurant-card" style="cursor: pointer; transition: transform 0.3s var(--ease-spring);">
+          <div style="position: relative; width: 100%; height: 180px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm);">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=80" alt="KFC Chicken" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(to top, rgba(2,6,12,0.85) 0%, transparent 100%); color: #fff; font-weight: 800; font-size: 19px; letter-spacing: -0.3px;">
+              40% OFF UPTO ₹80
+            </div>
+          </div>
+          <div style="padding: 12px 4px 0;">
+            <h3 style="font-size: 18px; font-weight: 700; color: #02060c;">KFC</h3>
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 15px; font-weight: 600;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #15803d; color: #fff; font-size: 11px;">★</span>
+              <span>4.1</span>
+              <span>•</span>
+              <span>30-35 mins</span>
+            </div>
+            <p style="color: #686b78; font-size: 14px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Burgers, Fast Food, Rolls</p>
+            <p style="color: #686b78; font-size: 14px;">Jayanagar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Swiggy App Promo Banner with Video Loop -->
+  <section class="swiggy-app-banner" style="background: #f0f0f5; padding: 48px 0; margin-top: 40px;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px;">
+      <div style="max-width: 540px;">
+        <h2 style="font-size: 32px; font-weight: 800; color: #02060c; line-height: 1.2;">For better experience, download the Swiggy app now</h2>
+        <p style="margin-top: 16px; font-size: 16px; color: #686b78;">Superfast deliveries, live order tracking, and exclusive discounts at your fingertips.</p>
+        <div style="display: flex; gap: 16px; margin-top: 28px;">
+          <button style="background: #02060c; color: #ffffff; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+            <span>▶</span> Google Play
+          </button>
+          <button style="background: #02060c; color: #ffffff; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+            <span>🍎</span> App Store
+          </button>
+        </div>
+      </div>
+      <div style="position: relative; max-width: 480px; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md);">
+        <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format&fit=crop&q=80" alt="Swiggy Delivery Experience" style="width: 100%; height: 280px; object-fit: cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Footer -->
+  <footer class="swiggy-footer" style="background: #02060c; color: #ffffff; padding: 64px 0 32px;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 48px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" rx="24" fill="#fc8019"/>
+              <path d="M50 15C36 15 25 26 25 40C25 58 46 80 50 84C54 80 75 58 75 40C75 26 64 15 50 15ZM50 50C44.5 50 40 45.5 40 40C40 34.5 44.5 30 50 30C55.5 30 60 34.5 60 40C60 45.5 55.5 50 50 50Z" fill="white"/>
+            </svg>
+            <span style="font-size: 24px; font-weight: 800; color: #ffffff;">Swiggy</span>
+          </div>
+          <p style="margin-top: 16px; color: #94a3b8; font-size: 14px;">© 2026 Bundl Technologies Pvt. Ltd</p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">Company</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; color: #94a3b8; font-size: 14px;">
+            <li><a href="#" style="color: inherit; text-decoration: none;">About</a></li>
+            <li><a href="#" style="color: inherit; text-decoration: none;">Careers</a></li>
+            <li><a href="#" style="color: inherit; text-decoration: none;">Team</a></li>
+            <li><a href="#" style="color: inherit; text-decoration: none;">Swiggy One</a></li>
+            <li><a href="#" style="color: inherit; text-decoration: none;">Swiggy Instamart</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">Contact Us</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; color: #94a3b8; font-size: 14px;">
+            <li><a href="#" style="color: inherit; text-decoration: none;">Help & Support</a></li>
+            <li><a href="#" style="color: inherit; text-decoration: none;">Partner with us</a></li>
+            <li><a href="#" style="color: inherit; text-decoration: none;">Ride with us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">We deliver to:</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; color: #94a3b8; font-size: 14px;">
+            <li>Bangalore</li>
+            <li>Gurgaon</li>
+            <li>Hyderabad</li>
+            <li>Delhi</li>
+            <li>Mumbai</li>
+            <li>Pune</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 32px; text-align: center; color: #64748b; font-size: 13px;">
+        Autonomous clone created with CLONE ANY UI (CAU) — 100% Token, Exact Media & 60fps Motion Parity.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

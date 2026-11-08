@@ -1,0 +1,23 @@
+<script setup lang="ts">
+// FooterSection_15 Component
+</script>
+
+<template>
+  <footer class="border-t border-zinc-200 bg-white py-12 dark:border-zinc-800 dark:bg-zinc-950 transition-colors">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <div class="flex items-center gap-3">
+          <span class="font-bold text-zinc-900 dark:text-zinc-100">Brand</span>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">
+            &copy; {{ new Date().getFullYear() }} All rights reserved. Built with fluid 60fps animations.
+          </p>
+        </div>
+        <div class="flex gap-6 text-sm text-zinc-500">
+          <a href="#" class="transition hover:text-zinc-900 hover:-translate-y-0.5 dark:hover:text-zinc-50">Privacy</a>
+          <a href="#" class="transition hover:text-zinc-900 hover:-translate-y-0.5 dark:hover:text-zinc-50">Terms</a>
+          <a href="#" class="transition hover:text-zinc-900 hover:-translate-y-0.5 dark:hover:text-zinc-50">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>

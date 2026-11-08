@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexAI — Autonomous Intelligence Infrastructure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-brand-primary: #6366f1;
+      --color-brand-accent: #06b6d4;
+      --color-brand-surface: #09090b;
+      --color-brand-card: #18181b;
+      --color-brand-border: #27272a;
+      --color-text-main: #f4f4f5;
+      --color-text-muted: #a1a1aa;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-glow: 0 0 50px -10px rgba(99, 102, 241, 0.25);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--color-brand-surface);
+      color: var(--color-text-main);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(9, 9, 11, 0.75);
+      border-bottom: 1px solid var(--color-brand-border);
+      height: 72px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .logo-badge {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, #6366f1, #06b6d4);
+      border-radius: 6px;
+    }
+    nav a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      margin: 0 16px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: #6366f1;
+      color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .btn-primary:hover {
+      background: #4f46e5;
+    }
+    /* Hero */
+    .hero {
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(99, 102, 241, 0.1);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 64px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 20px;
+      color: var(--color-text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+    /* Bento Grid */
+    .bento-section {
+      padding: 96px 0;
+    }
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .bento-card {
+      background: var(--color-brand-card);
+      border: 1px solid var(--color-brand-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .bento-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .bento-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .bento-card p {
+      font-size: 15px;
+      color: var(--color-text-muted);
+    }
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--color-brand-border);
+      padding: 48px 0;
+      text-align: center;
+      font-size: 14px;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-badge"></span>
+        <span>ApexAI</span>
+      </a>
+      <nav>
+        <a href="#features">Architecture</a>
+        <a href="#models">Models</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-primary">Deploy Cluster</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="badge">⚡ Production Ready Autonomous Workflows</div>
+        <h1>Distributed AI Pipelines Engineered for Real-Time Execution</h1>
+        <p>Deploy multi-agent swarms with self-healing task queues, sub-millisecond inference routing, and automated cluster elasticity.</p>
+        <div>
+          <button class="btn btn-primary" style="padding: 14px 28px; font-size: 16px;">Start Building Free &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="bento-section">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 style="font-size: 36px; font-weight: 700;">Infrastructure Built for Heavy Workloads</h2>
+          <p style="color: var(--color-text-muted); margin-top: 12px;">Zero cold starts. Sub-5ms context synchronization.</p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-card">
+            <div class="card-icon">⚡</div>
+            <h3>Low-Latency Streaming</h3>
+            <p>Direct peer-to-peer WebSocket pipes with edge token streaming and dynamic speculative decoding.</p>
+          </div>
+          <div class="bento-card">
+            <div class="card-icon">🛡️</div>
+            <h3>State Machine Integrity</h3>
+            <p>Strict schema validation and deterministic recovery with automatic checkpoint serialization.</p>
+          </div>
+          <div class="bento-card">
+            <div class="card-icon">🌐</div>
+            <h3>Multi-Cloud Fabric</h3>
+            <p>Seamless workload federation across AWS, GCP, Azure, and bare-metal high-density GPU clusters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ApexAI Systems Inc. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

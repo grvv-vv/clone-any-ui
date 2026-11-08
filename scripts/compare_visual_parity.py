@@ -1,0 +1,190 @@
+#!/usr/bin/env python3
+"""Compare visual and computed-style parity between source and replicated UI.
+
+Reads computed style snapshots from style_snapshot.js, evaluates parity tolerances,
+detects style and geometry drift, and outputs an actionable Audit Parity Report.
+
+Usage:
+  python compare_visual_parity.py --source source_snapshot.json --copy copy_snapshot.json --out parity_report.md
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+from typing import Any
+
+TOLERANCE_PX = 2.0
+
+ESSENTIAL_PROPERTIES = [
+    "fontFamily",
+    "fontSize",
+    "fontWeight",
+    "lineHeight",
+    "letterSpacing",
+    "color",
+    "backgroundColor",
+    "borderRadius",
+    "boxShadow",
+    "paddingTop",
+    "paddingRight",
+    "paddingBottom",
+    "paddingLeft",
+    "gap",
+    "display",
+    # Motion & Animation Parity
+    "transform",
+    "transitionDuration",
+    "transitionTimingFunction",
+]
+
+
+def load_json(path: str) -> dict[str, Any]:
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def parse_px(val: Any) -> float | None:
+    if isinstance(val, (int, float)):
+        return float(val)
+    if isinstance(val, str) and val.endswith("px"):
+        try:
+            return float(val[:-2].strip())
+        except ValueError:
+            return None
+    return None
+
+
+def evaluate_diffs(source_targets: list[dict], copy_targets: list[dict]) -> tuple[list[dict], float]:
+    copy_map = {item.get("selector"): item for item in copy_targets if item.get("selector")}
+
+    results = []
+    total_checks = 0
+    passed_checks = 0
+
+    for src in source_targets:
+        sel = src.get("selector")
+        dst = copy_map.get(sel)
+
+        entry = {
+            "selector": sel,
+            "status": "PASS",
+            "mismatches": [],
+        }
+
+        if not dst:
+            entry["status"] = "MISSING_IN_COPY"
+            results.append(entry)
+            continue
+
+        src_style = src.get("style", {})
+        dst_style = dst.get("style", {})
+
+        # Compare properties
+        for prop in ESSENTIAL_PROPERTIES:
+            s_val = src_style.get(prop)
+            d_val = dst_style.get(prop)
+
+            if s_val is None and d_val is None:
+                continue
+
+            total_checks += 1
+            # Check numeric px with tolerance
+            spx = parse_px(s_val)
+            dpx = parse_px(d_val)
+
+            if spx is not None and dpx is not None:
+                delta = abs(spx - dpx)
+                if delta <= TOLERANCE_PX:
+                    passed_checks += 1
+                else:
+                    entry["mismatches"].append({
+                        "property": prop,
+                        "source": s_val,
+                        "copy": d_val,
+                        "delta": f"{delta:.1f}px"
+                    })
+            else:
+                # String comparison
+                if str(s_val).strip().lower() == str(d_val).strip().lower():
+                    passed_checks += 1
+                else:
+                    entry["mismatches"].append({
+                        "property": prop,
+                        "source": s_val,
+                        "copy": d_val,
+                        "delta": "value mismatch"
+                    })
+
+        if entry["mismatches"]:
+            entry["status"] = "DRIFT"
+
+        results.append(entry)
+
+    score = (passed_checks / total_checks * 100.0) if total_checks > 0 else 100.0
+    return results, score
+
+
+def generate_markdown_report(results: list[dict], score: float) -> str:
+    lines = [
+        "# 🎯 UI Visual & Computed Style Parity Report",
+        "",
+        f"**Parity Score:** `{score:.1f}%` ({'✅ PASSED' if score >= 90 else '⚠️ DRIFT DETECTED'})",
+        "",
+        "## Summary of Selector Checks",
+        "",
+        "| Selector | Status | Mismatches Found |",
+        "| :--- | :--- | :--- |",
+    ]
+
+    for item in results:
+        status_icon = "✅ Pass" if item["status"] == "PASS" else ("❌ Missing" if item["status"] == "MISSING_IN_COPY" else "⚠️ Drift")
+        mismatch_count = len(item.get("mismatches", []))
+        lines.append(f"| `{item['selector']}` | {status_icon} | {mismatch_count} |")
+
+    lines.append("\n## Detailed Mismatch Breakdown\n")
+
+    has_details = False
+    for item in results:
+        if item.get("mismatches"):
+            has_details = True
+            lines.append(f"### `{item['selector']}`")
+            lines.append("| Property | Source Value | Copy Value | Delta |")
+            lines.append("| :--- | :--- | :--- | :--- |")
+            for m in item["mismatches"]:
+                lines.append(f"| `{m['property']}` | `{m['source']}` | `{m['copy']}` | `{m['delta']}` |")
+            lines.append("")
+
+    if not has_details:
+        lines.append("No visual or style drifts detected within tolerance thresholds!")
+
+    lines.append("\n---\n*Report generated by `web-ui-replicator` audit engine.*")
+    return "\n".join(lines)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Audit visual parity between source and replica snapshots.")
+    parser.add_argument("--source", required=True, help="Path to source style snapshot JSON")
+    parser.add_argument("--copy", required=True, help="Path to copy style snapshot JSON")
+    parser.add_argument("--out", default="parity_report.md", help="Output path for markdown report")
+    args = parser.parse_args()
+
+    source_data = load_json(args.source)
+    copy_data = load_json(args.copy)
+
+    source_targets = source_data.get("targets", [])
+    copy_targets = copy_data.get("targets", [])
+
+    results, score = evaluate_diffs(source_targets, copy_targets)
+    report_md = generate_markdown_report(results, score)
+
+    out_path = Path(args.out)
+    out_path.write_text(report_md, encoding="utf-8")
+
+    print(f"[✓] Parity score: {score:.1f}%")
+    print(f"[✓] Report written to: {out_path}")
+
+
+if __name__ == "__main__":
+    main()
+

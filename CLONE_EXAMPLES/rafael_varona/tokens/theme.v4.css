@@ -1,0 +1,28 @@
+@theme {
+  /* Tailwind v4 CSS-First Theme Configuration */
+  --color-brand-1: #2b5672;
+  --color-brand-2: #116dff;
+  --color-brand-3: #e03939;
+  --color-brand-4: #4eb7f5;
+  --color-brand-5: #0f2ccf;
+  --color-neutral-1: #414141;
+  --color-neutral-2: #5d5d61;
+  --color-neutral-3: #e8e6e6;
+  --color-neutral-4: #5f6360;
+  --color-neutral-5: #eaefff;
+  --font-sans: 'open-sans-v2', system-ui, sans-serif;
+  --radius-custom-sm: 0;
+  --radius-custom-md: 0px;
+  --radius-custom-lg: 7px;
+  --radius-custom-xl: undefinedpx;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-smooth-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-fade-in-up: fade-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-down: fade-in-down 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3.5s ease-in-out infinite;
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+}

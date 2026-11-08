@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head><meta name="referrer" content="no-referrer">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAU Instant Live Preview — Fluid Motion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#686b78',
+            }
+          },
+          fontFamily: {
+            sans: ['Basis Grotesque Pro', 'system-ui', 'sans-serif'],
+          },
+          keyframes: {"fade-in-up": {"0%": {"opacity": "0", "transform": "translateY(16px)"}, "100%": {"opacity": "1", "transform": "translateY(0)"}}, "float": {"0%, 100%": {"transform": "translateY(0)"}, "50%": {"transform": "translateY(-6px)"}}, "pulse-glow": {"0%, 100%": {"opacity": "0.35", "transform": "scale(1)"}, "50%": {"opacity": "0.75", "transform": "scale(1.04)"}}, "marquee": {"0%": {"transform": "translateX(0%)"}, "100%": {"transform": "translateX(-50%)"}}, "fade-in-down": {"0%": {"opacity": "0", "transform": "translateY(-16px)"}, "100%": {"opacity": "1", "transform": "translateY(0)"}}, "shimmer": {"0%": {"background-position": "-200% 0"}, "100%": {"background-position": "200% 0"}}, "accordion-down": {"0%": {"height": "0", "opacity": "0"}, "100%": {"height": "var(--radix-accordion-content-height, auto)", "opacity": "1"}}, "accordion-up": {"0%": {"height": "var(--radix-accordion-content-height, auto)", "opacity": "1"}, "100%": {"height": "0", "opacity": "0"}}, "scale-subtle": {"0%, 100%": {"transform": "scale(1)"}, "50%": {"transform": "scale(1.02)"}}, "badge-ping": {"0%": {"transform": "scale(1)", "opacity": "0.8"}, "75%, 100%": {"transform": "scale(2)", "opacity": "0"}}},
+          animation: {"fade-in-up": "fade-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards", "float": "float 4s ease-in-out infinite", "pulse-glow": "pulse-glow 3.5s ease-in-out infinite", "marquee": "marquee 30s linear infinite", "fade-in-down": "fade-in-down 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards", "shimmer": "shimmer 2s linear infinite", "accordion-down": "accordion-down 0.2s ease-out", "accordion-up": "accordion-up 0.2s ease-out", "scale-subtle": "scale-subtle 3s ease-in-out infinite", "badge-ping": "badge-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite"},
+          transitionTimingFunction: {"spring": "cubic-bezier(0.16, 1, 0.3, 1)", "bounce-soft": "cubic-bezier(0.34, 1.56, 0.64, 1)", "smooth-out": "cubic-bezier(0, 0, 0.2, 1)", "smooth-in-out": "cubic-bezier(0.4, 0, 0.2, 1)", "accelerate": "cubic-bezier(0.4, 0, 1, 1)", "custom-ease-1": "cubic-bezier(0.16, 1, 0.3, 1)"}
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes fade-in-up {
+      0% { opacity: 0; transform: translateY(16px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(1.04); }
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    /* Scroll Reveal Animation Hook */
+    [data-cau-animate="fade-up"], .cau-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-cau-animate="fade-up"].cau-visible, .cau-reveal.cau-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      [data-cau-animate="fade-up"], .cau-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+
+  <!-- CAU Microscopic Polish & Sub-Pixel Parity -->
+  <style>
+/**
+ * CLONE ANY UI (CAU) — Microscopic Polish & Sub-Pixel Parity Stylesheet
+ * Injects sub-pixel typography, stacked ambient shadows, sleek scrollbars,
+ * brand selection colors, tactile click compression, and organic grain.
+ */
+
+/* 1. Sub-Pixel Antialiasing & Typographic Sharpening */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+}
+
+/* 2. Brand-Matched Text Selection */
+::selection {
+  background-color: #fc8019 !important;
+  color: #000000 !important;
+}
+::-moz-selection {
+  background-color: #fc8019 !important;
+  color: #000000 !important;
+}
+
+/* 3. Ultra-Sleek Custom Scrollbars (Purges Clunky OS Bars) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* 4. Multi-Layer Atmospheric Stacked Shadows */
+.cau-shadow-ambient {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.25),
+    0 12px 28px -4px rgba(0, 0, 0, 0.55),
+    0 24px 48px -12px rgba(0, 0, 0, 0.75);
+}
+.cau-shadow-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 0 35px -5px #fc801933,
+    0 20px 40px -15px rgba(0, 0, 0, 0.8);
+}
+
+/* 5. Tactile Micro-Press Physics (Buttons & Cards) */
+button:not(:disabled), a[role="button"], .cau-pressable {
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease, opacity 0.15s ease;
+}
+button:not(:disabled):active, a[role="button"]:active, .cau-pressable:active {
+  transform: scale(0.975) translateY(0.5px);
+}
+
+/* 6. High-Precision Accessible Focus-Visible Rings */
+button:focus-visible, a:focus-visible, input:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #fc8019 !important;
+  outline-offset: 2px !important;
+}
+
+/* 7. Subtle Organic Tactile Grain / Noise Overlay (SVG feTurbulence) */
+.cau-grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999998;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 8. Mobile Safe-Area Inset Compliance (iOS Home Indicator) */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .cau-safe-bottom, footer, #signup-bar, [data-testid="now-playing-bar"] {
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased min-h-screen">
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2 bg-blue-600/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg border border-blue-400/30">
+    <span class="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <span>⚡ CAU Live Preview · 60fps Motion Active</span>
+  </div>
+
+  <!-- Section: FeaturesSection_3 -->
+<!-- FeaturesSection_3 Component with Card Hover Physics & Icon Micro-Interactions -->
+<section id="features" class="py-24 sm:py-32" data-cau-animate="fade-up">
+  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50 animate-fade-in-up">
+        Top restaurant chains in Bangalore
+      </h2>
+      <p class="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+        Pizzas, Fast Food, Pastas
+      </p>
+    </div>
+
+    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+    <!-- Card 1 -->
+    <div class="group relative overflow-hidden rounded-2xl border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-900/5 hover:border-blue-500/40 dark:border-zinc-800/80 dark:bg-zinc-900 dark:hover:border-blue-500/40">
+      <div class="relative mb-5 h-44 w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+        <img
+          src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format&fit=crop&q=80"
+          alt="Pizza Hut"
+          class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+      <h3 class="flex items-center justify-between text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+        <span>Pizza Hut</span>
+        <span class="text-blue-600 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+          &rarr;
+        </span>
+      </h3>
+      <p class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        Koramangala
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group relative overflow-hidden rounded-2xl border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-900/5 hover:border-blue-500/40 dark:border-zinc-800/80 dark:bg-zinc-900 dark:hover:border-blue-500/40">
+      <div class="relative mb-5 h-44 w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+        <img
+          src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&auto=format&fit=crop&q=80"
+          alt="Burger King"
+          class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+      <h3 class="flex items-center justify-between text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+        <span>Burger King</span>
+        <span class="text-blue-600 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+          &rarr;
+        </span>
+      </h3>
+      <p class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        Burgers, American, Shakes
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group relative overflow-hidden rounded-2xl border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-900/5 hover:border-blue-500/40 dark:border-zinc-800/80 dark:bg-zinc-900 dark:hover:border-blue-500/40">
+      <div class="relative mb-5 h-44 w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+        <img
+          src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&auto=format&fit=crop&q=80"
+          alt="Meghana Foods"
+          class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+      <h3 class="flex items-center justify-between text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+        <span>Meghana Foods</span>
+        <span class="text-blue-600 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+          &rarr;
+        </span>
+      </h3>
+      <p class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        Indiranagar
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="group relative overflow-hidden rounded-2xl border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-900/5 hover:border-blue-500/40 dark:border-zinc-800/80 dark:bg-zinc-900 dark:hover:border-blue-500/40">
+      <div class="relative mb-5 h-44 w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+        <img
+          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=80"
+          alt="KFC Chicken"
+          class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+      <h3 class="flex items-center justify-between text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+        <span>KFC</span>
+        <span class="text-blue-600 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+          &rarr;
+        </span>
+      </h3>
+      <p class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        Biryani, Andhra, South Indian
+      </p>
+    </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section: FooterSection_5 -->
+<!-- FooterSection_5 Component -->
+<footer class="border-t border-zinc-200 bg-white py-12 dark:border-zinc-800 dark:bg-zinc-950 transition-colors">
+  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-zinc-900 dark:text-zinc-100">Brand</span>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">
+          &copy; 2026 All rights reserved. Built with fluid 60fps animations.
+        </p>
+      </div>
+      <div class="flex gap-6 text-sm text-zinc-500">
+        <a href="#" class="transition hover:text-zinc-900 hover:-translate-y-0.5 dark:hover:text-zinc-50">Privacy</a>
+        <a href="#" class="transition hover:text-zinc-900 hover:-translate-y-0.5 dark:hover:text-zinc-50">Terms</a>
+        <a href="#" class="transition hover:text-zinc-900 hover:-translate-y-0.5 dark:hover:text-zinc-50">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Section: HeaderSection_1 -->
+<!-- HeaderSection_1 Component with Animated Hover Physics -->
+<header class="sticky top-0 z-50 w-full border-b border-zinc-200/80 bg-white/80 backdrop-blur-md transition-all duration-300 dark:border-zinc-800/80 dark:bg-zinc-950/80">
+  <div class="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <a href="#" class="group flex items-center gap-2.5 font-bold text-xl tracking-tight text-zinc-900 dark:text-zinc-50 cursor-pointer">
+      <span class="h-7 w-7 rounded-lg bg-blue-600 inline-flex items-center justify-center text-white text-xs font-black shadow-md shadow-blue-500/25 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-6">
+        ⚡
+      </span>
+      <span class="transition-colors duration-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">Brand</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+      <a href="#features" class="relative py-1 transition hover:text-zinc-900 dark:hover:text-zinc-50 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300">Features</a>
+      <a href="#pricing" class="relative py-1 transition hover:text-zinc-900 dark:hover:text-zinc-50 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300">Pricing</a>
+      <a href="#testimonials" class="relative py-1 transition hover:text-zinc-900 dark:hover:text-zinc-50 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300">Testimonials</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <button class="relative overflow-hidden rounded-xl bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-zinc-900/10 hover:bg-zinc-800 active:translate-y-0 active:scale-95 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200">
+        Swiggy
+      </button>
+    </div>
+  </div>
+</header>
+
+  <!-- Section: HeroSection_2 -->
+<!-- HeroSection_2 Component with Ambient Glow & Animated Entrance -->
+<section class="relative overflow-hidden py-24 sm:py-32" data-cau-animate="fade-up">
+  <div class="pointer-events-none absolute -top-40 left-1/2 -z-10 -translate-x-1/2 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+    <div class="aspect-[1155/678] w-[68rem] bg-gradient-to-tr from-blue-600 to-cyan-400 opacity-20 animate-pulse-glow"></div>
+  </div>
+
+  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 shadow-sm backdrop-blur-sm animate-float">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+        </span>
+        <span>✨ Autonomous Replication Ready</span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50 leading-[1.1] animate-fade-in-up">
+        What's on your mind?
+      </h1>
+
+      <p class="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400 animate-fade-in-up [animation-delay:150ms]">
+        Biryani
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4 animate-fade-in-up [animation-delay:300ms]">
+        <button class="relative overflow-hidden rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/35 hover:bg-blue-500 active:translate-y-0 active:scale-95">
+          ←
+        </button>
+        <a href="#demo" class="group inline-flex items-center gap-1.5 text-sm font-semibold leading-6 text-zinc-900 transition-all duration-200 hover:text-blue-600 hover:translate-x-1 dark:text-zinc-50 dark:hover:text-blue-400">
+          Live Interactive Demo <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Exact Mirrored Hero Image Showcase with Ambient Glow -->
+    <div class="mt-14 relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-zinc-200/80 bg-zinc-900/5 p-2 shadow-2xl backdrop-blur-sm transition-all duration-500 ease-out hover:shadow-blue-500/10 hover:border-zinc-300 dark:border-zinc-800/80 dark:bg-zinc-900/50">
+      <img
+        src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=280&auto=format&fit=crop&q=80"
+        alt="Biryani"
+        class="w-full rounded-xl object-cover shadow-inner transition-transform duration-700 ease-out hover:scale-[1.01]"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Infinite Logo Marquee Ticker -->
+    <div class="mt-20 w-full overflow-hidden border-y border-zinc-200/60 dark:border-zinc-800/60 py-6">
+      <p class="text-center text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-4">
+        Trusted by world-class frontend teams
+      </p>
+      <div class="flex gap-12 whitespace-nowrap animate-marquee">
+        <span class="text-sm font-semibold text-zinc-400">Acme Corp</span>
+        <span class="text-sm font-semibold text-zinc-400">NextScale</span>
+        <span class="text-sm font-semibold text-zinc-400">HyperFlow</span>
+        <span class="text-sm font-semibold text-zinc-400">Veloce</span>
+        <span class="text-sm font-semibold text-zinc-400">CloudMesh</span>
+        <span class="text-sm font-semibold text-zinc-400">ApexCore</span>
+        <span class="text-sm font-semibold text-zinc-400">Acme Corp</span>
+        <span class="text-sm font-semibold text-zinc-400">NextScale</span>
+        <span class="text-sm font-semibold text-zinc-400">HyperFlow</span>
+        <span class="text-sm font-semibold text-zinc-400">Veloce</span>
+        <span class="text-sm font-semibold text-zinc-400">CloudMesh</span>
+        <span class="text-sm font-semibold text-zinc-400">ApexCore</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section: HeroSection_4 -->
+<!-- HeroSection_4 Component with Ambient Glow & Animated Entrance -->
+<section class="relative overflow-hidden py-24 sm:py-32" data-cau-animate="fade-up">
+  <div class="pointer-events-none absolute -top-40 left-1/2 -z-10 -translate-x-1/2 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+    <div class="aspect-[1155/678] w-[68rem] bg-gradient-to-tr from-blue-600 to-cyan-400 opacity-20 animate-pulse-glow"></div>
+  </div>
+
+  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 shadow-sm backdrop-blur-sm animate-float">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+        </span>
+        <span>✨ Autonomous Replication Ready</span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50 leading-[1.1] animate-fade-in-up">
+        For better experience, download the Swiggy app now
+      </h1>
+
+      <p class="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400 animate-fade-in-up [animation-delay:150ms]">
+        Superfast deliveries, live order tracking, and exclusive discounts at your fingertips.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4 animate-fade-in-up [animation-delay:300ms]">
+        <button class="relative overflow-hidden rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/35 hover:bg-blue-500 active:translate-y-0 active:scale-95">
+          ▶ Google Play
+        </button>
+        <a href="#demo" class="group inline-flex items-center gap-1.5 text-sm font-semibold leading-6 text-zinc-900 transition-all duration-200 hover:text-blue-600 hover:translate-x-1 dark:text-zinc-50 dark:hover:text-blue-400">
+          Live Interactive Demo <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Exact Mirrored Hero Image Showcase with Ambient Glow -->
+    <div class="mt-14 relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-zinc-200/80 bg-zinc-900/5 p-2 shadow-2xl backdrop-blur-sm transition-all duration-500 ease-out hover:shadow-blue-500/10 hover:border-zinc-300 dark:border-zinc-800/80 dark:bg-zinc-900/50">
+      <img
+        src="https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format&fit=crop&q=80"
+        alt="Swiggy Delivery Experience"
+        class="w-full rounded-xl object-cover shadow-inner transition-transform duration-700 ease-out hover:scale-[1.01]"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Infinite Logo Marquee Ticker -->
+    <div class="mt-20 w-full overflow-hidden border-y border-zinc-200/60 dark:border-zinc-800/60 py-6">
+      <p class="text-center text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-4">
+        Trusted by world-class frontend teams
+      </p>
+      <div class="flex gap-12 whitespace-nowrap animate-marquee">
+        <span class="text-sm font-semibold text-zinc-400">Acme Corp</span>
+        <span class="text-sm font-semibold text-zinc-400">NextScale</span>
+        <span class="text-sm font-semibold text-zinc-400">HyperFlow</span>
+        <span class="text-sm font-semibold text-zinc-400">Veloce</span>
+        <span class="text-sm font-semibold text-zinc-400">CloudMesh</span>
+        <span class="text-sm font-semibold text-zinc-400">ApexCore</span>
+        <span class="text-sm font-semibold text-zinc-400">Acme Corp</span>
+        <span class="text-sm font-semibold text-zinc-400">NextScale</span>
+        <span class="text-sm font-semibold text-zinc-400">HyperFlow</span>
+        <span class="text-sm font-semibold text-zinc-400">Veloce</span>
+        <span class="text-sm font-semibold text-zinc-400">CloudMesh</span>
+        <span class="text-sm font-semibold text-zinc-400">ApexCore</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script>
+    // Zero-dependency Scroll Entrance Reveal Observer
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('cau-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('[data-cau-animate], .cau-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+
+<script>
+/**
+ * CLONE ANY UI (CAU) — Universal Behavioral Engine (60fps Fluid Interactivity)
+ * Synthesizes working state machines for media players, live search, counters,
+ * accordions, like toggles, sliders, and spring motion physics.
+ */
+(() => {
+  'use strict';
+
+  const BRAND_COLOR = '#fc8019';
+
+  // --------------------------------------------------------------------------
+  // 1. AUDIO & MEDIA PLAYBACK ENGINE (Real Sound, Draggable Scrubber, Timers)
+  // --------------------------------------------------------------------------
+  class CAUAudioEngine {
+    constructor() {
+      this.isPlaying = false;
+      this.currentTime = 0;
+      this.duration = 214; // 3:34 default
+      this.volume = 0.8;
+      this.audioCtx = null;
+      this.oscillator = null;
+      this.gainNode = null;
+      this.animFrame = null;
+      this.currentTrackTitle = 'Cloned Interactive Track';
+      this.currentArtist = 'CAU Live Audio';
+      this.currentCover = '';
+      
+      this.init();
+    }
+
+    initAudioContext() {
+      if (this.audioCtx) return;
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        this.audioCtx = new AudioContext();
+        this.gainNode = this.audioCtx.createGain();
+        this.gainNode.gain.setValueAtTime(this.volume, this.audioCtx.currentTime);
+        this.gainNode.connect(this.audioCtx.destination);
+      } catch (e) {
+        console.warn('[CAU] Web Audio initialization deferred:', e);
+      }
+    }
+
+    // Synthesizes pleasant musical chords/beats so every play button makes REAL music
+    startSynthesizedPlayback() {
+      this.initAudioContext();
+      if (!this.audioCtx) return;
+      if (this.audioCtx.state === 'suspended') {
+        this.audioCtx.resume();
+      }
+      this.stopSynthesizedPlayback();
+
+      // Create an ambient musical chord loop (C Major 9 chord: C4, E4, G4, B4, D5)
+      const freqs = [261.63, 329.63, 392.00, 493.88, 587.33];
+      this.activeOscillators = freqs.map((freq, idx) => {
+        const osc = this.audioCtx.createOscillator();
+        const oscGain = this.audioCtx.createGain();
+        osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
+        osc.frequency.setValueAtTime(freq, this.audioCtx.currentTime);
+        
+        // Soft pulsing volume
+        oscGain.gain.setValueAtTime(0.04 / (idx + 1), this.audioCtx.currentTime);
+        osc.connect(oscGain);
+        oscGain.connect(this.gainNode);
+        osc.start();
+        return osc;
+      });
+    }
+
+    stopSynthesizedPlayback() {
+      if (this.activeOscillators) {
+        this.activeOscillators.forEach(osc => {
+          try { osc.stop(); osc.disconnect(); } catch (e) {}
+        });
+        this.activeOscillators = null;
+      }
+    }
+
+    togglePlay(sourceBtn, trackInfo = null) {
+      this.isPlaying = !this.isPlaying;
+      if (trackInfo) {
+        if (trackInfo.title) this.currentTrackTitle = trackInfo.title;
+        if (trackInfo.artist) this.currentArtist = trackInfo.artist;
+        if (trackInfo.cover) this.currentCover = trackInfo.cover;
+        this.updateNowPlayingUI();
+      }
+
+      if (this.isPlaying) {
+        this.startSynthesizedPlayback();
+        this.startTimeLoop();
+        this.updatePlayIcons(true);
+        this.showToast(`▶ Now Playing: ${this.currentTrackTitle}`);
+      } else {
+        this.stopSynthesizedPlayback();
+        this.stopTimeLoop();
+        this.updatePlayIcons(false);
+      }
+    }
+
+    startTimeLoop() {
+      this.stopTimeLoop();
+      const tick = () => {
+        if (!this.isPlaying) return;
+        this.currentTime += 0.2;
+        if (this.currentTime >= this.duration) {
+          this.currentTime = 0;
+        }
+        this.updateScrubberUI();
+        this.animFrame = setTimeout(tick, 200);
+      };
+      this.animFrame = setTimeout(tick, 200);
+    }
+
+    stopTimeLoop() {
+      if (this.animFrame) {
+        clearTimeout(this.animFrame);
+        this.animFrame = null;
+      }
+    }
+
+    seekToPercent(percent) {
+      this.currentTime = Math.max(0, Math.min(this.duration, this.duration * percent));
+      this.updateScrubberUI();
+    }
+
+    setVolume(percent) {
+      this.volume = Math.max(0, Math.min(1, percent));
+      if (this.gainNode && this.audioCtx) {
+        this.gainNode.gain.setValueAtTime(this.volume, this.audioCtx.currentTime);
+      }
+      this.updateVolumeUI();
+    }
+
+    formatTime(sec) {
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    updateScrubberUI() {
+      const percent = (this.currentTime / this.duration) * 100;
+      
+      // Update time text
+      document.querySelectorAll('#playback-position, [data-testid="playback-position"], .playback-current-time').forEach(el => {
+        el.textContent = this.formatTime(this.currentTime);
+      });
+      document.querySelectorAll('#playback-duration, [data-testid="playback-duration"], .playback-duration').forEach(el => {
+        el.textContent = this.formatTime(this.duration);
+      });
+
+      // Update progress bar width
+      document.querySelectorAll('#progress-bar, #playback-progressbar, [data-testid="progress-bar"], .progress-bar-fill').forEach(el => {
+        el.style.width = `${percent}%`;
+      });
+      document.querySelectorAll('#progress-bar-handle, [data-testid="progress-bar-handle"]').forEach(el => {
+        el.style.left = `${percent}%`;
+      });
+    }
+
+    updateVolumeUI() {
+      const pct = this.volume * 100;
+      document.querySelectorAll('#volume-bar, [data-testid="volume-bar"], .volume-bar-fill').forEach(el => {
+        el.style.width = `${pct}%`;
+      });
+    }
+
+    updatePlayIcons(playing) {
+      // Update global player play button icon
+      document.querySelectorAll('[data-testid="control-button-playpause"], .player-play-btn, button[aria-label*="Play" i], button[aria-label*="Pause" i]').forEach(btn => {
+        btn.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+        const svg = btn.querySelector('svg');
+        if (svg) {
+          if (playing) {
+            svg.innerHTML = '<path d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z" fill="currentColor"/>';
+          } else {
+            svg.innerHTML = '<path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z" fill="currentColor"/>';
+          }
+        }
+      });
+    }
+
+    updateNowPlayingUI() {
+      document.querySelectorAll('[data-testid="context-item-info-title"], .now-playing-title').forEach(el => {
+        el.textContent = this.currentTrackTitle;
+      });
+      document.querySelectorAll('[data-testid="context-item-info-subtitles"], .now-playing-artist').forEach(el => {
+        el.textContent = this.currentArtist;
+      });
+      if (this.currentCover) {
+        document.querySelectorAll('[data-testid="cover-art-image"], .now-playing-cover').forEach(img => {
+          img.src = this.currentCover;
+        });
+      }
+    }
+
+    showToast(msg) {
+      let toast = document.getElementById('cau-interactive-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'cau-interactive-toast';
+        toast.style.cssText = 'position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#18181b;color:#fff;padding:10px 20px;border-radius:9999px;font-size:13px;font-weight:600;box-shadow:0 10px 25px -5px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.15);z-index:999999;transition:all 0.3s cubic-bezier(0.16,1,0.3,1);opacity:0;pointer-events:none;';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+      clearTimeout(this.toastTimer);
+      this.toastTimer = setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(10px)';
+      }, 2600);
+    }
+
+    init() {
+      // Bind bottom player play/pause button
+      document.addEventListener('click', (e) => {
+        const playBtn = e.target.closest('[data-testid="control-button-playpause"], .player-play-btn, button[aria-label*="Play" i], button[aria-label*="Pause" i]');
+        if (playBtn) {
+          e.preventDefault();
+          this.togglePlay(playBtn);
+          return;
+        }
+
+        // Card play button click
+        const cardPlay = e.target.closest('[data-testid="play-button"], .card-play-btn, button[aria-label*="Play " i]');
+        if (cardPlay) {
+          e.preventDefault();
+          const card = cardPlay.closest('[data-testid*="card"], .card, div[role="group"]') || cardPlay.parentElement;
+          const titleEl = card ? card.querySelector('[data-testid="card-title"], h3, h4, .font-bold, .title') : null;
+          const subtitleEl = card ? card.querySelector('[data-testid="card-subtitle"], p, .text-sm, .artist') : null;
+          const imgEl = card ? card.querySelector('img') : null;
+
+          const trackInfo = {
+            title: titleEl ? titleEl.textContent.trim() : 'Playing Track',
+            artist: subtitleEl ? subtitleEl.textContent.trim() : 'Featured Artist',
+            cover: imgEl ? imgEl.src : ''
+          };
+          this.togglePlay(cardPlay, trackInfo);
+          return;
+        }
+
+        // Like / Heart button click
+        const likeBtn = e.target.closest('[data-testid="add-button"], .like-button, button[aria-label*="Save" i], button[aria-label*="Like" i]');
+        if (likeBtn) {
+          e.preventDefault();
+          const isLiked = likeBtn.classList.toggle('cau-liked');
+          likeBtn.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)';
+          likeBtn.style.transform = 'scale(1.3)';
+          setTimeout(() => { likeBtn.style.transform = 'scale(1)'; }, 250);
+          
+          const svg = likeBtn.querySelector('svg');
+          if (svg) {
+            svg.style.color = isLiked ? BRAND_COLOR : 'currentColor';
+            svg.style.fill = isLiked ? BRAND_COLOR : 'none';
+          }
+          this.showToast(isLiked ? '💚 Added to Your Library' : 'Removed from Library');
+          return;
+        }
+
+        // Shuffle & Repeat buttons
+        const shuffleBtn = e.target.closest('[data-testid="control-button-shuffle"]');
+        if (shuffleBtn) {
+          const on = shuffleBtn.classList.toggle('text-emerald-500');
+          this.showToast(on ? '🔀 Shuffle enabled' : 'Shuffle off');
+          return;
+        }
+        const repeatBtn = e.target.closest('[data-testid="control-button-repeat"]');
+        if (repeatBtn) {
+          const on = repeatBtn.classList.toggle('text-emerald-500');
+          this.showToast(on ? '🔁 Repeat enabled' : 'Repeat off');
+          return;
+        }
+      });
+
+      // Timeline Scrubber Interaction (Click / Drag seeking)
+      const bindScrubber = (trackEl, isVolume = false) => {
+        if (!trackEl) return;
+        const onSeek = (clientX) => {
+          const rect = trackEl.getBoundingClientRect();
+          const pct = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+          if (isVolume) {
+            this.setVolume(pct);
+          } else {
+            this.seekToPercent(pct);
+          }
+        };
+
+        trackEl.style.cursor = 'pointer';
+        trackEl.addEventListener('click', (e) => onSeek(e.clientX));
+
+        let dragging = false;
+        trackEl.addEventListener('mousedown', (e) => {
+          dragging = true;
+          onSeek(e.clientX);
+          const onMove = (ev) => { if (dragging) onSeek(ev.clientX); };
+          const onUp = () => {
+            dragging = false;
+            window.removeEventListener('mousemove', onMove);
+            window.removeEventListener('mouseup', onUp);
+          };
+          window.addEventListener('mousemove', onMove);
+          window.addEventListener('mouseup', onUp);
+        });
+      };
+
+      document.querySelectorAll('#playback-progressbar, [data-testid="playback-progressbar"], .playback-bar').forEach(el => bindScrubber(el, false));
+      document.querySelectorAll('#volume-bar, [data-testid="volume-bar"], .volume-bar').forEach(el => bindScrubber(el, true));
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // 2. LIVE SEARCH & FILTER ENGINE (Real-Time Card Filtering)
+  // --------------------------------------------------------------------------
+  function initLiveSearch() {
+    const searchInputs = document.querySelectorAll('input[type="search"], input[placeholder*="play" i], input[placeholder*="search" i], input[placeholder*="find" i], [data-testid="search-input"]');
+    if (!searchInputs.length) return;
+
+    searchInputs.forEach(input => {
+      input.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('[data-testid*="card"], .card, div[role="group"], [data-testid="track-row"]');
+        
+        let matchCount = 0;
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          const matches = !query || text.includes(query);
+          
+          card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          if (matches) {
+            card.style.display = '';
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+            matchCount++;
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.96)';
+            setTimeout(() => {
+              if (card.style.opacity === '0') card.style.display = 'none';
+            }, 250);
+          }
+        });
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 3. QUANTITY COUNTER & CART BADGE ENGINE (Food / E-Commerce)
+  // --------------------------------------------------------------------------
+  function initQuantityCounters() {
+    document.addEventListener('click', (e) => {
+      // Click "ADD" button
+      const addBtn = e.target.closest('.cau-add-btn, button:has-text("ADD"), [data-cau-role="add-cart"]');
+      if (addBtn && !addBtn.dataset.hasCounter) {
+        e.preventDefault();
+        addBtn.dataset.hasCounter = 'true';
+        addBtn.innerHTML = `
+          <div class="flex items-center justify-between w-full h-full px-2 gap-2 text-emerald-600 font-extrabold select-none">
+            <button class="cau-minus px-1 hover:scale-125 transition-transform">−</button>
+            <span class="cau-count text-sm">1</span>
+            <button class="cau-plus px-1 hover:scale-125 transition-transform">+</button>
+          </div>
+        `;
+        updateCartBadge(1);
+        return;
+      }
+
+      // Stepper Plus
+      const plusBtn = e.target.closest('.cau-plus');
+      if (plusBtn) {
+        e.preventDefault();
+        const countEl = plusBtn.parentElement.querySelector('.cau-count');
+        let count = parseInt(countEl.textContent, 10) + 1;
+        countEl.textContent = count;
+        updateCartBadge(1);
+        return;
+      }
+
+      // Stepper Minus
+      const minusBtn = e.target.closest('.cau-minus');
+      if (minusBtn) {
+        e.preventDefault();
+        const countEl = minusBtn.parentElement.querySelector('.cau-count');
+        let count = parseInt(countEl.textContent, 10) - 1;
+        if (count <= 0) {
+          const container = minusBtn.closest('[data-has-counter="true"]');
+          if (container) {
+            delete container.dataset.hasCounter;
+            container.innerHTML = 'ADD';
+          }
+        } else {
+          countEl.textContent = count;
+        }
+        updateCartBadge(-1);
+        return;
+      }
+    });
+
+    function updateCartBadge(delta) {
+      document.querySelectorAll('.cart-badge, [data-cau-role="cart-count"]').forEach(badge => {
+        let curr = parseInt(badge.textContent.replace(/\D/g, '') || '0', 10);
+        let next = Math.max(0, curr + delta);
+        badge.textContent = next > 0 ? `${next}` : '';
+        badge.style.transform = 'scale(1.35)';
+        setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
+      });
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // 4. FILTER PILLS & TABS ENGINE
+  // --------------------------------------------------------------------------
+  function initFilterPills() {
+    document.addEventListener('click', (e) => {
+      const pill = e.target.closest('.filter-pill, [role="tab"], button[data-testid*="chip"]');
+      if (!pill) return;
+      const group = pill.parentElement;
+      if (group) {
+        group.querySelectorAll('.filter-pill, [role="tab"], button[data-testid*="chip"]').forEach(p => {
+          p.classList.remove('bg-white', 'text-black', 'active', 'border-white');
+          p.classList.add('bg-zinc-800', 'text-white');
+        });
+        pill.classList.remove('bg-zinc-800', 'text-white');
+        pill.classList.add('bg-white', 'text-black', 'active');
+      }
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 5. ACCORDIONS & PRICING SWITCHERS
+  // --------------------------------------------------------------------------
+  function initAccordionsAndToggles() {
+    // Pricing monthly/annual toggle
+    document.addEventListener('click', (e) => {
+      const toggle = e.target.closest('[data-cau-role="pricing-toggle"], .pricing-toggle');
+      if (toggle) {
+        const isAnnual = toggle.classList.toggle('annual-active');
+        document.querySelectorAll('.price-amount').forEach(el => {
+          const monthly = el.dataset.monthly || '$29';
+          const annual = el.dataset.annual || '$23';
+          el.textContent = isAnnual ? annual : monthly;
+        });
+        document.querySelectorAll('.price-period').forEach(el => {
+          el.textContent = isAnnual ? '/yr' : '/mo';
+        });
+      }
+    });
+
+    // Accordion expand/collapse
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest('[data-accordion-trigger], .faq-question');
+      if (!trigger) return;
+      const content = trigger.nextElementSibling;
+      if (content) {
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        content.style.maxHeight = isOpen ? '0px' : `${content.scrollHeight}px`;
+        content.style.overflow = 'hidden';
+        content.style.transition = 'max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+        const icon = trigger.querySelector('.accordion-icon');
+        if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+      }
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 6. MAGNETIC BUTTONS & 3D CARD TILT (Dennis Snellenberg / Portfolios)
+  // --------------------------------------------------------------------------
+  function initPhysicsAndMotion() {
+    // Magnetic pull
+    document.querySelectorAll('.magnetic-btn, [data-cau-magnetic]').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        btn.style.transition = 'transform 0.1s ease-out';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0px, 0px)';
+        btn.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+      });
+    });
+
+    // 3D Card tilt
+    document.querySelectorAll('[data-cau-tilt], .tilt-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(1000px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) scale3d(1.02, 1.02, 1.02)`;
+        card.style.transition = 'transform 0.1s ease-out';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+      });
+    });
+  }
+
+  // Initialize all engines once DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    window.cauAudio = new CAUAudioEngine();
+    initLiveSearch();
+    initQuantityCounters();
+    initFilterPills();
+    initAccordionsAndToggles();
+    initPhysicsAndMotion();
+    console.log('[CAU] Universal Behavioral Engine active: 60fps interactivity ready.');
+  });
+})();
+
+</script>
+
+  <div class="cau-grain-overlay" aria-hidden="true"></div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+export { default as FeaturesSection_1 } from './FeaturesSection_1.vue';
+export { default as FeaturesSection_2 } from './FeaturesSection_2.vue';
+export { default as FeaturesSection_3 } from './FeaturesSection_3.vue';
+export { default as FeaturesSection_4 } from './FeaturesSection_4.vue';
+export { default as FeaturesSection_5 } from './FeaturesSection_5.vue';
+export { default as FeaturesSection_6 } from './FeaturesSection_6.vue';
+export { default as FeaturesSection_7 } from './FeaturesSection_7.vue';
+export { default as FooterSection_8 } from './FooterSection_8.vue';
+export { default as FooterSection_9 } from './FooterSection_9.vue';

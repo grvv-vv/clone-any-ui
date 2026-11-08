@@ -1,0 +1,21 @@
+{
+  "font_features": [
+    "cv02",
+    "cv03",
+    "cv04",
+    "cv11",
+    "tnum"
+  ],
+  "letter_spacings": [],
+  "stacked_shadows": [
+    "0 0 0 1px rgba(255, 255, 255, 0.08), 0 2px 4px rgba(0, 0, 0, 0.25), 0 12px 28px -4px rgba(0, 0, 0, 0.55), 0 24px 48px -12px rgba(0, 0, 0, 0.75)",
+    "0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 35px -5px #fc801933, 0 20px 40px -15px rgba(0, 0, 0, 0.8)"
+  ],
+  "selection_color": "#fc8019 !important",
+  "antialiased": true,
+  "text_wrap_balance": true,
+  "active_press": true,
+  "safe_area_insets": true,
+  "glassmorphism": false,
+  "hairline_borders": true
+}

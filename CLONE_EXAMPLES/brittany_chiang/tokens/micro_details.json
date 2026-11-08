@@ -1,0 +1,21 @@
+{
+  "font_features": [
+    "ss03",
+    "cv02",
+    "cv11",
+    "cv11\"}.text-2xl{font-size:1.5rem"
+  ],
+  "letter_spacings": [
+    "-.025em}.tracking-wide{letter-spacing:.025em}.tracking-widest{letter-spacing:.1em}.text-slate-200{--tw-text-opacity:1"
+  ],
+  "stacked_shadows": [
+    "var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.group:hover .lg\\:group-hover\\:drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgba(0,0,0,.04)) drop-shadow(0 4px 3px rgba(0,0,0,.1))"
+  ],
+  "selection_color": "rgb(94 234 212/var(--tw-bg-opacity))}.selection\\:text-teal-900 ::-moz-selection{--tw-text-opacity:1",
+  "antialiased": true,
+  "text_wrap_balance": true,
+  "active_press": true,
+  "safe_area_insets": true,
+  "glassmorphism": true,
+  "hairline_borders": true
+}
