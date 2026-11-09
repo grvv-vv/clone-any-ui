@@ -15,7 +15,7 @@ SECRET_PATTERNS = [
 ]
 
 # High priority dirs
-TARGET_DIRS = ['.github', 'scripts', 'studio', 'tests', 'templates', 'examples', 'CLONE_EXAMPLES/gaurav_portfolio']
+TARGET_DIRS = ['.github', 'scripts', 'studio', 'tests', 'templates', 'examples']
 TARGET_FILES = ['clone_any_ui.py', 'run_studio.py', 'bookmarklet.js', 'install.sh', 'install.bat', 'README.md', 'SKILL.md', 'pyproject.toml']
 
 findings = []

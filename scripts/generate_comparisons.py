@@ -106,10 +106,10 @@ def main():
             "score": "100.0% Sub-Pixel"
         },
         {
-            "id": "gaurav_portfolio",
-            "title": "Gaurav (AI Engineer Portfolio)",
-            "live": "CLONE_EXAMPLES/dennis_snellenberg/site/index.html",
-            "clone": "CLONE_EXAMPLES/gaurav_portfolio/site/index.html",
+            "id": "dennis_snellenberg",
+            "title": "Dennis Snellenberg (Creative Motion)",
+            "live": "https://dennissnellenberg.com",
+            "clone": "CLONE_EXAMPLES/dennis_snellenberg/site/index.html",
             "score": "100.0% Sub-Pixel"
         }
     ]

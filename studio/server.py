@@ -98,9 +98,7 @@ def get_clone_data(out_folder: Path, clean_name: str, stdout_log: str = "") -> d
         source_html = (out_folder / "preview.html").read_text(encoding="utf-8", errors="replace")
 
     display_name = clean_name.replace("_", " ").title()
-    if clean_name == "gaurav_portfolio":
-        display_name = "Gaurav — AI Engineer Portfolio"
-    elif clean_name == "linear_app":
+    if clean_name == "linear_app":
         display_name = "Linear.app — Issue Tracking SaaS"
 
     return {
@@ -173,9 +171,7 @@ class StudioRequestHandler(http.server.SimpleHTTPRequestHandler):
                         seen_ids.add(item.name)
                         site_html_count = len(list((item / "site").rglob("*.html"))) if (item / "site").exists() else 0
                         display_name = item.name.replace("_", " ").title()
-                        if item.name == "gaurav_portfolio":
-                            display_name = "Gaurav — AI Engineer Portfolio"
-                        elif item.name == "linear_app":
+                        if item.name == "linear_app":
                             display_name = "Linear.app — Issue Tracking SaaS"
                         clones.append({
                             "id": item.name,

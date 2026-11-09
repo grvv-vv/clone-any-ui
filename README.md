@@ -129,7 +129,6 @@ Every reference clone included in the repository is audited by `scripts/verify_a
 | Reference Project | Type / Complexity | Pages | Frameworks | Self-Healing | JS/Data Syntax | Sub-Pixel Match |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | **`linear_app`** | Iconic Dark SaaS Interface & Bento Grid | 88 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
-| **`gaurav_portfolio`** | AI Engineer Multi-Page Portfolio | 15 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`dennis_snellenberg`**| Creative Motion Portfolio (GSAP Physics) | 30 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`spotify`** | Dark-Mode Web Player SPA | 62 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`swiggy`** | Hyperlocal Food Delivery & Cart Checkout | 8 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
@@ -156,7 +155,7 @@ Side-by-side visual comparisons captured in Chrome headless at 1280×800. Notice
 *Left: Live brittanychiang.com. Right: CAU Autonomous Replicant with smooth radial cursor flashlight effect, fixed sidebar navigation, and WCAG AA contrast compliance.*
 
 ### 3. Dennis Snellenberg — Creative Motion Portfolio (100.0% Match)
-![Dennis Snellenberg Benchmark](docs/assets/gaurav_portfolio_comparison.webp)
+![Dennis Snellenberg Benchmark](docs/assets/dennis_snellenberg_comparison.webp)
 *Left: Original creative layout. Right: CAU Autonomous Replicant with 60fps magnetic cursor physics, smooth ticker marquee, and responsive viewport wrapping.*
 
 > [!NOTE]
@@ -217,7 +216,7 @@ Launch the local split-screen visual dashboard with live Desktop / Tablet / Mobi
 cau-studio
 # or: python run_studio.py
 ```
-*Opens `http://localhost:3000` with the **Showcase Clones Selector** loading Gaurav's AI Engineer Portfolio and Linear.app.*
+*Opens `http://localhost:3000` with the **Showcase Clones Selector** loading Linear.app and Dennis Snellenberg by default.*
 
 ---
 
@@ -256,9 +255,8 @@ clone-any-ui/
 │   ├── verify_all_clones.py          # Master repository benchmark runner
 │   ├── security_audit.py             # Automated secrets & confidentiality scanner
 │   └── crawl_full_site.py            # Multi-page recursive site crawler
-└── CLONE_EXAMPLES/                   # 7 production-grade reference clones (100% Match)
+└── CLONE_EXAMPLES/                   # 6 production-grade reference clones (100% Match)
     ├── linear_app/                   # 86 components, Linear.app dark theme & bento grid
-    ├── gaurav_portfolio/             # Gaurav — AI Engineer Portfolio
     ├── dennis_snellenberg/           # Creative motion portfolio (GSAP)
     ├── spotify/                      # Dark-mode Web Player SPA
     ├── swiggy/                       # Food ordering & delivery
