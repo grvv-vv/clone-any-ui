@@ -31,3 +31,4 @@ echo Or clone any website via CLI:
 echo    cau --url https://example.com --out ./my-clone --all
 echo ========================================================
 pause
+

@@ -37,6 +37,7 @@ Every reference clone included in the repository is audited by `scripts/verify_a
 
 | Reference Project | Type / Complexity | Pages | Frameworks | Self-Healing | JS/Data Syntax | Sub-Pixel Match |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **`linear_app`** | Iconic SaaS Interface (Dark Mode & Bento) | 88 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`gaurav_portfolio`** | AI Engineer Multi-Page Portfolio | 15 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`dennis_snellenberg`**| Creative Motion Portfolio (GSAP) | 30 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`spotify`** | Dark-Mode Web Player SPA | 62 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
@@ -171,7 +172,8 @@ clone-any-ui/
 │   ├── audit_subpixel_fidelity.py    # 10-point sub-pixel fidelity precision auditor
 │   ├── verify_all_clones.py          # Master repository benchmark runner
 │   └── crawl_full_site.py            # Multi-page recursive site crawler
-└── CLONE_EXAMPLES/                   # 6 production-grade reference clones (100% Sub-Pixel Match)
+└── CLONE_EXAMPLES/                   # 7 production-grade reference clones (100% Sub-Pixel Match)
+    ├── linear_app/                   # 86 components, Linear.app dark theme & bento grid
     ├── gaurav_portfolio/             # Gaurav — AI Engineer Portfolio
     ├── dennis_snellenberg/           # Creative motion portfolio
     ├── spotify/                      # Dark-mode Web Player

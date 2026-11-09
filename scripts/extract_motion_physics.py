@@ -169,8 +169,11 @@ def parse_keyframes(css_text: str) -> dict[str, dict]:
 
 
 def parse_hover_micro_interactions(css_text: str) -> list[dict]:
-    """Extracts hover, active, and focus transform and motion rules."""
-    hover_pattern = re.compile(r"([^{}\n]*:(?:hover|active|focus|focus-visible|focus-within|group-hover)[^{}\n]*)\s*\{([^}]+)\}", re.I)
+    """Extracts hover, active, and focus transform and motion rules safely without regex backtracking."""
+    hover_pattern = re.compile(
+        r"(?:^|[;}])\s*([^{};]{1,200}:(?:hover|active|focus|focus-visible|focus-within|group-hover)[^{};]{0,100})\s*\{([^}]{1,500})\}",
+        re.I
+    )
     micro_interactions = []
 
     for match in hover_pattern.finditer(css_text):
@@ -193,6 +196,8 @@ def parse_hover_micro_interactions(css_text: str) -> list[dict]:
                     "selector": selector,
                     "declarations": declarations
                 })
+                if len(micro_interactions) >= 40:
+                    break
 
     return micro_interactions[:30]
 

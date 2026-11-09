@@ -1,0 +1,147 @@
+:root {
+  /* Original CSS Custom Properties */
+  --toast-icon-margin-start: 4px;
+  --toast-icon-margin-end: -3px;
+  --toast-svg-margin-start: 0px;
+  --toast-svg-margin-end: -1px;
+  --toast-button-margin-start: 0;
+  --toast-button-margin-end: auto;
+  --toast-close-button-start: unset;
+  --toast-close-button-end: 0;
+  --toast-close-button-transform: translate(35%, -35%);
+  --gray1: hsl(0, 0%, 99%);
+  --gray2: hsl(0, 0%, 97.3%);
+  --gray3: hsl(0, 0%, 95.1%);
+  --gray4: hsl(0, 0%, 93%);
+  --gray5: hsl(0, 0%, 90.9%);
+  --gray6: hsl(0, 0%, 88.7%);
+  --gray7: hsl(0, 0%, 85.8%);
+  --gray8: hsl(0, 0%, 78%);
+  --gray9: hsl(0, 0%, 56.1%);
+  --gray10: hsl(0, 0%, 52.3%);
+  --gray11: hsl(0, 0%, 43.5%);
+  --gray12: hsl(0, 0%, 9%);
+  --border-radius: 8px;
+  --y: translateY(40%);
+  --lift-amount: calc(var(--lift) * var(--gap));
+  --lift: -1;
+  --scale: var(--toasts-before) * 0.05 + 1;
+  --normal-bg: #000;
+  --normal-border: hsl(0, 0%, 20%);
+  --normal-text: var(--gray1);
+  --success-bg: hsl(150, 100%, 6%);
+  --success-border: hsl(147, 100%, 12%);
+  --success-text: hsl(150, 86%, 65%);
+  --info-bg: hsl(215, 100%, 6%);
+  --info-border: hsl(223, 43%, 17%);
+  --info-text: hsl(216, 87%, 65%);
+  --warning-bg: hsl(64, 100%, 6%);
+  --warning-border: hsl(60, 100%, 9%);
+  --warning-text: hsl(46, 87%, 65%);
+  --error-bg: hsl(358, 76%, 10%);
+  --error-border: hsl(357, 89%, 16%);
+
+  /* Synthesized Design Tokens */
+  --color-brand-1: #f79ce0;
+  --color-brand-2: #55cdff;
+  --color-brand-3: #8fa4ff;
+  --color-brand-4: #ffc47c;
+  --color-brand-5: #89d196;
+  --color-neutral-1: #e2e4e7;
+  --color-neutral-2: #e4e5e9;
+  --color-neutral-3: #9c9da1;
+  --color-neutral-4: #62666d;
+  --color-neutral-5: #d0d6e0;
+  --font-primary: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+
+  /* Motion & Spring Physics */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-smooth-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-normal: 300ms;
+  --duration-fast: 150ms;
+}
+
+/* --- Extracted & Baseline Keyframes --- */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes accordion-down {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: var(--radix-accordion-content-height, auto);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  0% {
+    height: var(--radix-accordion-content-height, auto);
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}

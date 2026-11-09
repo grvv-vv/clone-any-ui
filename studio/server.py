@@ -100,6 +100,8 @@ def get_clone_data(out_folder: Path, clean_name: str, stdout_log: str = "") -> d
     display_name = clean_name.replace("_", " ").title()
     if clean_name == "gaurav_portfolio":
         display_name = "Gaurav — AI Engineer Portfolio"
+    elif clean_name == "linear_app":
+        display_name = "Linear.app — Issue Tracking SaaS"
 
     return {
         "success": True,
@@ -173,6 +175,8 @@ class StudioRequestHandler(http.server.SimpleHTTPRequestHandler):
                         display_name = item.name.replace("_", " ").title()
                         if item.name == "gaurav_portfolio":
                             display_name = "Gaurav — AI Engineer Portfolio"
+                        elif item.name == "linear_app":
+                            display_name = "Linear.app — Issue Tracking SaaS"
                         clones.append({
                             "id": item.name,
                             "name": display_name,
