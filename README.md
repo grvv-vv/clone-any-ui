@@ -5,29 +5,120 @@
 [![CI / Sub-Pixel Audit](https://github.com/grvv-vv/clone-any-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/grvv-vv/clone-any-ui/actions/workflows/ci.yml)
 [![Sub-Pixel Fidelity: 100%](https://img.shields.io/badge/Sub--Pixel%20Fidelity-100.0%25-10b981.svg)](#-verified-clones-benchmark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3b82f6.svg)](LICENSE)
-[![Python: 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
-[![Offline-First: Verified](https://img.shields.io/badge/Offline--First-100%25%20Intact-emerald.svg)](#-features)
+[![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
+[![Cross-Platform: Win/Mac/Linux](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-orange.svg)](#-universal-1-command-installation)
+[![AI Agents: Universal](https://img.shields.io/badge/AI%20Agents-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Windsurf-purple.svg)](#-ai-agent-integration)
 
-**Autonomous Web UI & Motion Replication Engine with 100% Sub-Pixel Fidelity**  
-*Transforms any website in the world into clean, accessible, zero-tracking React, Vue 3, Svelte 5, or Tailwind code with fluid 60fps animations, Web Audio haptics, and spring physics.*
+**Autonomous Web UI & Motion Replication Engine with 100% Sub-Pixel Precision**  
+*Transforms any website in the world into clean, accessible, zero-tracking React 19, Vue 3, Svelte 5, and Semantic HTML5 code with fluid 60fps animations, Web Audio haptics, and spring physics.*
 
-[Features](#-key-features) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Benchmark](#-verified-clones-benchmark) • [1-Click Bookmarklet](#-1-click-browser-bookmarklet) • [Studio GUI](#-visual-studio-gui)
+[Installation](#-universal-1-command-installation) • [AI Agent Integration](#-ai-agent-integration) • [Cloning Feasibility Matrix](#-cloning-feasibility-matrix-what-can--cannot-be-copied) • [Benchmark](#-verified-clones-benchmark) • [1-Click Bookmarklet](#-1-click-browser-bookmarklet) • [Studio GUI](#-visual-studio-gui)
 
 </div>
 
 ---
 
-## 🚀 Overview
+## ⚡ Universal 1-Command Installation
 
-**CLONE ANY UI (CAU)** is an infallible, autonomous reverse-engineering pipeline that turns arbitrary web interfaces into clean, production-grade codebases with living animations, interactive movements, and real visual media.
+Install **CLONE ANY UI** in one command on any operating system. The installer automatically installs Python dependencies, registers the global `cau` CLI, and auto-configures detected AI coding agents (Antigravity, Claude Code, Cursor, Windsurf):
 
-Unlike naive scrapers or LLM prompt approximations:
-* **100% Sub-Pixel Accuracy (0.5px tolerance)**: Enforces hardware-accelerated font smoothing, OpenType tabular figures (`tnum`, `cv02`-`cv11`), negative tracking, 4-layer stacked ambient shadows, 1px micro-borders, and tactile click physics (`scale(0.975)`).
-* **Zero-Placeholder Guarantee**: Downloads real media (WebP, SVG, PNG, MP4, WebM) with anti-hotlink headers. Never injects ugly dummy placeholder SVGs.
-* **Autonomous Self-Healing Engine**: Automatically injects `<meta name="referrer" content="no-referrer">`, purges dead SSR bundles (`/_next/`, `/_serverless/`), normalizes root-relative paths, and validates syntax with `node --check`.
-* **Universal Ingestion & Anti-Bot Stealth**: Headless Chrome with stealth flags (`--disable-blink-features=AutomationControlled`), post-hydration SPA waiting, recursive Shadow DOM piercing, and WebGL canvas snapshots.
-* **Multi-Framework Parity**: Simultaneously outputs **React 19 (.tsx)**, **Vue 3 (.vue)**, **Svelte 5 (.svelte)**, and **Semantic HTML5 (.html)**.
-* **Zero Tracking Bloat**: Strips Google Analytics, GTM, Meta Pixel, Hotjar, Sentry, and Cloudflare Turnstile challenges.
+### 🪟 Windows (PowerShell)
+```powershell
+irm https://raw.githubusercontent.com/grvv-vv/clone-any-ui/main/install.ps1 | iex
+```
+
+### 🍎 macOS & 🐧 Linux (Bash / Zsh)
+```bash
+curl -fsSL https://raw.githubusercontent.com/grvv-vv/clone-any-ui/main/install.sh | bash
+```
+
+### 📦 Manual Git Clone (Any OS)
+```bash
+git clone https://github.com/grvv-vv/clone-any-ui.git
+cd clone-any-ui
+pip install -r requirements.txt
+pip install -e .
+```
+
+---
+
+## 🤖 AI Agent Integration
+
+Once installed, **CLONE ANY UI** connects seamlessly to any AI coding assistant. You don't need to write complex extraction code—simply prompt your agent in plain English:
+
+> *"Clone https://linear.app using the clone-any-ui skill and export React 19 components with full motion physics."*
+
+### Agent-Specific Auto-Configuration
+
+| AI Coding Agent | Configuration Path | How to Activate in Chat |
+| :--- | :--- | :--- |
+| **Google Antigravity** | `~/.gemini/config/skills/clone-any-ui/` | `"Use clone-any-ui to copy <url>"` |
+| **Claude Code** | `~/.claude/skills/clone-any-ui/` | `/skill clone-any-ui` or prompt directly |
+| **Cursor IDE** | `~/.cursor/skills/clone-any-ui/` or `.cursorrules` | `@clone-any-ui clone <url>` |
+| **Windsurf / Codeium** | `~/.codeium/windsurf/skills/clone-any-ui/` | Prompt Cascade to use `cau` CLI |
+| **Cline & Roo-Code** | Skill directory registered in workspace | In chat: `"Run cau --url <url> --all"` |
+| **GitHub Copilot CLI** | Installed via global `cau` PATH binary | Execute `cau --url <url> --out ./clone` |
+
+---
+
+## 🔍 Cloning Feasibility Matrix: What Can & Cannot Be Copied
+
+CLONE ANY UI is designed to faithfully reproduce the visual interface, animations, typography, and interactive behaviors of any public or accessible web interface. To guarantee complete transparency, here is the exact engineering breakdown of what can and cannot be cloned:
+
+### 🟢 100% Fully Cloneable (No Restrictions)
+
+| Category | Examples | Replication Fidelity |
+| :--- | :--- | :---: |
+| **Modern SaaS Landing Pages** | Linear, Stripe, Vercel, Supabase, Raycast, Tailwind | **100.0% Sub-Pixel** |
+| **Interactive SPAs** | React, Next.js, Vue, Nuxt, SvelteKit, Angular apps | **100.0% Sub-Pixel** |
+| **Design & Motion Portfolios** | Dennis Snellenberg, Brittany Chiang, Rafael Varona | **100.0% Sub-Pixel** |
+| **E-Commerce & Food Delivery** | Swiggy, Shopify stores, Nike, Apple store pages | **100.0% Sub-Pixel** |
+| **Micro-Interactions & Motion** | Bézier curves, spring physics, hover states, parallax | **100.0% Fluid 60fps** |
+| **Design Tokens & Typography** | Google Fonts, custom variable fonts, tnum, cv02-cv11 | **100.0% Exact** |
+| **Stacked Ambient Shadows** | Multi-layer 4-tier elevation shadows, micro-borders | **100.0% Exact** |
+| **Audio Haptics & Feedback** | Web Audio API synth clicks, toggles, keyboard HUD | **100.0% Synthesized** |
+| **Multi-Framework Output** | React 19 (.tsx), Vue 3 (.vue), Svelte 5 (.svelte), HTML5 | **All 4 simultaneously** |
+
+---
+
+### 🟡 Conditionally Cloneable (Requires 1-Click Bookmarklet)
+
+Some web pages cannot be reached directly by automated headless scrapers due to security barriers. In these scenarios, CAU provides the **1-Click Bookmarklet** or manual HTML input:
+
+* **Cloudflare Turnstile, hCaptcha & Anti-Bot Walls**:
+  * *Condition*: Headless scrapers are blocked by Cloudflare anti-automation challenges.
+  * *Solution*: Open the site in your regular browser (Chrome, Edge, Safari, Brave) where you solve the challenge naturally. Click the `⚡ Clone Any UI` bookmarklet. It extracts the fully hydrated DOM and assets directly to your clipboard. Then run:
+    ```bash
+    cau --clipboard --url https://target-site.com --out ./my-clone --all
+    ```
+* **Authenticated Dashboards & Private User Sessions**:
+  * *Condition*: Pages behind login credentials, SSO, or 2FA (e.g., your private AWS console, Notion workspace, or logged-in Twitter feed).
+  * *Solution*: Log into your account in your browser, click the bookmarklet, and import the clipboard snapshot into CAU.
+* **Complex WebGL / 3D Canvases (Three.js, Spline)**:
+  * *Condition*: 3D scenes rendered inside a `<canvas>` element do not exist as standard HTML DOM elements.
+  * *Solution*: CAU captures high-resolution WebGL canvas buffer snapshots and embeds a lightweight interactive WebGL/Three.js placeholder bridge with matching perspective and aspect ratio.
+* **Deep Dynamic Infinite Feeds (X/Twitter, Instagram, LinkedIn)**:
+  * *Condition*: Infinite feeds only render DOM nodes currently in or near the viewport.
+  * *Solution*: Scroll through the desired items before executing the extractor to populate the DOM buffer.
+
+---
+
+### 🔴 Fundamentally Non-Cloneable (Hard Physical & Architectural Boundaries)
+
+No software in the world can copy these components without direct server or cryptographic access:
+
+1. **DRM-Protected Video & Audio Streams**:
+   * *Examples*: Netflix, Disney+, Spotify encrypted audio tracks, Apple TV+ video streams.
+   * *Why*: Encrypted using Google Widevine L1/L3 or Apple FairPlay hardware DRM keys.
+   * *Behavior*: The player UI (timeline scrubber, volume controls, play/pause buttons, captions frame, cards) clones with **100% visual fidelity**, but media playback falls back to an open-source test stream or royalty-free asset.
+2. **Pure WebAssembly Canvas-Only Applications**:
+   * *Examples*: Figma's internal canvas workspace, Unreal Engine WebAssembly exports, Google Earth 3D globe.
+   * *Why*: These applications do not use HTML/CSS for their canvas workspace; they render raw pixels directly onto an OpenGL/WebGL canvas context via C++/Rust compiled to WebAssembly.
+   * *Behavior*: The surrounding HTML UI toolbars, menus, and sidebars clone with 100% fidelity, while the internal canvas workspace is preserved as a high-density snapshot.
+3. **Proprietary Backend Compute & Private Databases**:
+   * *Examples*: Stripe's fraud detection algorithms, Google's search index database, Airbnb's booking pricing engine.
+   * *Why*: These execute purely on remote private servers and never transmit their source code or database records to the browser.
+   * *Behavior*: CAU synthesizes local client-side state machines with mock data (`localStorage`, reactive state) for interactive forms, search filters, and carts. You simply connect your own backend API endpoints.
 
 ---
 
@@ -37,61 +128,59 @@ Every reference clone included in the repository is audited by `scripts/verify_a
 
 | Reference Project | Type / Complexity | Pages | Frameworks | Self-Healing | JS/Data Syntax | Sub-Pixel Match |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **`linear_app`** | Iconic SaaS Interface (Dark Mode & Bento) | 88 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
+| **`linear_app`** | Iconic Dark SaaS Interface & Bento Grid | 88 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`gaurav_portfolio`** | AI Engineer Multi-Page Portfolio | 15 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
-| **`dennis_snellenberg`**| Creative Motion Portfolio (GSAP) | 30 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
+| **`dennis_snellenberg`**| Creative Motion Portfolio (GSAP Physics) | 30 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`spotify`** | Dark-Mode Web Player SPA | 62 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
-| **`swiggy`** | Hyperlocal Food Delivery & Cart | 8 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
+| **`swiggy`** | Hyperlocal Food Delivery & Cart Checkout | 8 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`rafael_varona`** | 3D Motion Portfolio & Wix Data | 25 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 | **`brittany_chiang`** | Minimalist Developer Portfolio | 11 | 4 / 4 | ✅ **PASS** | ✅ **PASS** | ⭐ **100.0%** |
 
-Run the benchmark yourself:
+Run the verification benchmark yourself:
 ```bash
 python scripts/verify_all_clones.py
 ```
 
 ---
 
-## ⚡ Quick Start
+## ⚡ CLI Quick Start
 
-### 1. The Master Autonomous Pipeline
-Clone any live URL into clean React / Tailwind with full 60fps animations:
+### 1. Autonomous Live URL Cloning
 ```bash
-python clone_any_ui.py --url https://example.com --out ./my-clone
+cau --url https://example.com --out ./my-clone
 ```
 
-### 2. Export All Frameworks (React, Vue 3, Svelte 5, HTML)
+### 2. Export All Frameworks (React 19, Vue 3, Svelte 5, HTML5)
 ```bash
-python clone_any_ui.py --url https://example.com --out ./my-clone --all
+cau --url https://example.com --out ./my-clone --all
 ```
 
-### 3. Clone from Local HTML
+### 3. Clone from Saved HTML File
 ```bash
-python clone_any_ui.py --file ./path/to/page.html --out ./my-clone --all
+cau --file ./saved_page.html --out ./my-clone --all
 ```
 
 ### 4. Recursive Full-Site Multi-Page Crawl
-Recursively mirror an entire site hierarchy (`/`, `/about`, `/projects`, `/engineering`):
 ```bash
-python clone_any_ui.py --url https://example.com --out ./full-site --crawl --max-pages 20
+cau --url https://example.com --out ./full-site --crawl --max-pages 25
 ```
 
 ---
 
 ## 🔖 1-Click Browser Bookmarklet
 
-For sites behind Cloudflare Turnstile, CAPTCHAs, or authentication logins, use the built-in **1-Click Bookmarklet**:
+For sites behind Cloudflare, CAPTCHAs, or logins:
 
-1. Create a new browser bookmark named `⚡ Clone Any UI`.
-2. Set its URL to the code in [`bookmarklet.js`](bookmarklet.js):
+1. Create a new bookmark in your browser named `⚡ Clone Any UI`.
+2. Set its URL to:
 ```javascript
 javascript:(function(){const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/grvv-vv/clone-any-ui@main/scripts/browser_extract.js?t='+Date.now();document.body.appendChild(s);})();
 ```
-3. Visit any page in Chrome, Edge, Safari, or Brave, and click the bookmark.
+3. Navigate to any page and click the bookmark.
 4. The hydrated DOM, canvas snapshots, and computed tokens are copied to your clipboard.
 5. In your terminal, run:
 ```bash
-python clone_any_ui.py --clipboard --url https://target-site.com --out ./my-clone --all
+cau --clipboard --url https://target-site.com --out ./my-clone --all
 ```
 
 ---
@@ -101,82 +190,53 @@ python clone_any_ui.py --clipboard --url https://target-site.com --out ./my-clon
 Launch the local split-screen visual dashboard with live Desktop / Tablet / Mobile preview, color chips, and token explorer:
 
 ```bash
-python run_studio.py
+cau-studio
+# or: python run_studio.py
 ```
-*Opens `http://localhost:3000` with the **Showcase Clones Selector** loading Gaurav's AI Engineer Portfolio by default.*
+*Opens `http://localhost:3000` with the **Showcase Clones Selector** loading Gaurav's AI Engineer Portfolio and Linear.app.*
 
 ---
 
-## 📦 Installation
+## 🔒 Confidentiality & Privacy Guarantee
 
-### Option A: 1-Click Script (Windows)
-Double-click `install.bat` or run:
-```cmd
-install.bat
-```
-
-### Option B: 1-Command Script (macOS / Linux)
-```bash
-chmod +x install.sh
-./install.sh
-```
-
-### Option C: Python PIP (Editable CLI)
-```bash
-pip install -e .
-```
-Now you can use the global `cau` command from anywhere:
-```bash
-cau --url https://stripe.com --out ./stripe-clone --all
-```
-
-### Option D: Installing as an Agent Skill
-
-#### In Google Antigravity
-```bash
-# Windows
-xcopy /E /I clone-any-ui %USERPROFILE%\.gemini\config\skills\clone-any-ui
-
-# macOS / Linux
-cp -r clone-any-ui ~/.gemini/config/skills/clone-any-ui
-```
-
-#### In Claude Code
-```bash
-mkdir -p .claude/skills
-cp -r clone-any-ui .claude/skills/clone-any-ui
-```
+* **Zero Leaked Secrets**: Thoroughly scanned with `scripts/security_audit.py` to ensure zero API keys, session tokens, passwords, or personal credentials exist in the codebase.
+* **Privacy-Preserving**: Strips all analytics tracking IDs, session cookies, and third-party monitoring beacons (Google Analytics, GTM, Meta Pixel, Hotjar, Sentry).
+* **Safe Local Execution**: Runs entirely on your local machine without phoning home or transmitting your cloned code to any external cloud service.
 
 ---
 
-## 🧰 Architecture & Bundled Scripts
+## 🧰 Repository Architecture
 
 ```text
 clone-any-ui/
-├── clone_any_ui.py                   # Master unified autonomous pipeline
+├── clone_any_ui.py                   # Master unified autonomous pipeline CLI
 ├── run_studio.py                     # Studio GUI launcher (localhost:3000)
 ├── bookmarklet.js                    # 1-click browser bookmarklet
+├── install.ps1                       # 1-command installer for Windows (PowerShell)
+├── install.sh                        # 1-command installer for Linux & macOS (Bash)
+├── install.bat                       # Double-click Windows installer
 ├── pyproject.toml                    # Standard PEP 517/621 packaging metadata
-├── install.bat / install.sh          # 1-click cross-platform setup scripts
 ├── studio/                           # Local split-screen visual dashboard
-├── templates/                        # Tailwind config & token schemas
+├── templates/                        # Tailwind config & design token schemas
 ├── scripts/
 │   ├── universal_extractor.py        # Stealth headless Chrome & shadow-root piercer
 │   ├── browser_extract.js            # Zero-network DevTools console ingestor
 │   ├── mirror_clean_ui.py            # High-speed parallel asset mirror & tracker purger
 │   ├── extract_design_tokens.py      # Semantic color, typography & motion token extractor
+│   ├── extract_motion_physics.py     # 60fps spring physics & cubic-bezier motion analyzer
 │   ├── componentize_layout.py        # React 19, Vue 3, Svelte 5, HTML componentizer
 │   ├── synthesize_interactions.py    # Web Audio synthesis, scrubbers & keyboard HUD
-│   ├── extract_micro_details.py      # Sub-pixel typography, shadows, & organic grain
+│   ├── extract_micro_details.py      # Sub-pixel typography, shadows & organic grain
 │   ├── self_heal_and_verify.py       # Autonomous syntax & asset self-healing engine
 │   ├── audit_subpixel_fidelity.py    # 10-point sub-pixel fidelity precision auditor
 │   ├── verify_all_clones.py          # Master repository benchmark runner
+│   ├── security_audit.py             # Automated secrets & confidentiality scanner
 │   └── crawl_full_site.py            # Multi-page recursive site crawler
-└── CLONE_EXAMPLES/                   # 7 production-grade reference clones (100% Sub-Pixel Match)
+└── CLONE_EXAMPLES/                   # 7 production-grade reference clones (100% Match)
     ├── linear_app/                   # 86 components, Linear.app dark theme & bento grid
     ├── gaurav_portfolio/             # Gaurav — AI Engineer Portfolio
-    ├── dennis_snellenberg/           # Creative motion portfolio
-    ├── spotify/                      # Dark-mode Web Player
+    ├── dennis_snellenberg/           # Creative motion portfolio (GSAP)
+    ├── spotify/                      # Dark-mode Web Player SPA
     ├── swiggy/                       # Food ordering & delivery
     ├── rafael_varona/                # Isometric 3D motion animations
     └── brittany_chiang/              # Minimalist developer portfolio

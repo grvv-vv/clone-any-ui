@@ -50,6 +50,7 @@ dev = [
 [project.scripts]
 cau = "clone_any_ui:main"
 clone-any-ui = "clone_any_ui:main"
+cau-studio = "run_studio:main"
 
 [project.urls]
 Homepage = "https://github.com/grvv-vv/clone-any-ui"

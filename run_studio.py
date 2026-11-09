@@ -22,6 +22,9 @@ try:
 except ImportError as e:
     sys.exit(f"[-] Failed to import studio server: {e}")
 
-if __name__ == "__main__":
+def main():
     start_studio(port=3000, open_browser=True)
+
+if __name__ == "__main__":
+    main()
 
