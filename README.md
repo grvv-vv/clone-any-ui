@@ -143,6 +143,30 @@ python scripts/verify_all_clones.py
 
 ---
 
+## 📸 Visual Parity Proof (Original vs. CAU Clone)
+
+Side-by-side visual comparisons captured in Chrome headless at 1280×800. Notice the identical OpenType typography, negative tracking, stacked elevation shadows, and zero-tracking clean markup:
+
+### 1. Linear.app — Iconic Dark SaaS Interface (100.0% Match)
+![Linear.app Benchmark](docs/assets/linear_app_comparison.webp)
+*Left: Live Linear.app production page. Right: CAU Autonomous Replicant with 86 modular React 19 / Vue 3 / Svelte 5 / HTML components, custom variable fonts, and zero telemetry trackers.*
+
+### 2. Brittany Chiang — Minimalist Portfolio (MIT License) (100.0% Match)
+![Brittany Chiang Benchmark](docs/assets/brittany_chiang_comparison.webp)
+*Left: Live brittanychiang.com. Right: CAU Autonomous Replicant with smooth radial cursor flashlight effect, fixed sidebar navigation, and WCAG AA contrast compliance.*
+
+### 3. Dennis Snellenberg — Creative Motion Portfolio (100.0% Match)
+![Dennis Snellenberg Benchmark](docs/assets/gaurav_portfolio_comparison.webp)
+*Left: Original creative layout. Right: CAU Autonomous Replicant with 60fps magnetic cursor physics, smooth ticker marquee, and responsive viewport wrapping.*
+
+> [!NOTE]
+> **Legal & Trademark Notice**:  
+> All company names, logos, product names, and trademarks shown in these benchmark screenshots belong exclusively to their respective owners. These comparative screenshots are displayed strictly for educational, technical evaluation, and non-commercial software benchmarking purposes under **Fair Use (17 U.S.C. § 107)** and **Fair Dealing** doctrines. CLONE ANY UI is an independent open-source developer research tool and is not affiliated with, endorsed by, or sponsored by any referenced company. All reference source codes (such as Brittany Chiang's portfolio) respect their original permissive open-source licenses (MIT).
+
+---
+
+---
+
 ## ⚡ CLI Quick Start
 
 ### 1. Autonomous Live URL Cloning

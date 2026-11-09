@@ -1,4 +1,4 @@
-﻿# ==============================================================================
+# ==============================================================================
 #   CLONE ANY UI (CAU) — Universal 1-Command Installer for Windows
 #   Usage: irm https://raw.githubusercontent.com/grvv-vv/clone-any-ui/main/install.ps1 | iex
 # ==============================================================================
@@ -157,3 +157,4 @@ Write-Host "Launch Visual Studio GUI:" -ForegroundColor Cyan
 Write-Host "   cau-studio   (or python $targetDir\run_studio.py)" -ForegroundColor White
 Write-Host "==================================================================" -ForegroundColor Green
 Write-Host ""
+
