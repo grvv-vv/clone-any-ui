@@ -94,9 +94,13 @@ Some web pages cannot be reached directly by automated headless scrapers due to 
 * **Authenticated Dashboards & Private User Sessions**:
   * *Condition*: Pages behind login credentials, SSO, or 2FA (e.g., your private AWS console, Notion workspace, or logged-in Twitter feed).
   * *Solution*: Log into your account in your browser, click the bookmarklet, and import the clipboard snapshot into CAU.
+* **WebAssembly (WASM) & Unity/Unreal Canvas 3D Games**:
+  * *Condition*: 3D games and canvas engines execute compiled C++/Rust/C# bytecode directly to OpenGL without DOM nodes.
+  * *Solution*: CAU's built-in **`wasm_asset_ripper.py`** sniffs and mirrors `.wasm`, `.data`, and `.unityweb` bundles, rewrites Emscripten paths, and injects Cross-Origin Isolation (COOP/COEP) headers so the complete 3D game executes offline natively.
+  * *For 3D Mesh Extraction*: **`webgl_mesh_ripper.js`** hooks `gl.drawElements` and vertex buffers to export geometry into standard `.gltf` / `.glb` 3D files for Three.js.
 * **Complex WebGL / 3D Canvases (Three.js, Spline)**:
   * *Condition*: 3D scenes rendered inside a `<canvas>` element do not exist as standard HTML DOM elements.
-  * *Solution*: CAU captures high-resolution WebGL canvas buffer snapshots and embeds a lightweight interactive WebGL/Three.js placeholder bridge with matching perspective and aspect ratio.
+  * *Solution*: CAU captures high-resolution WebGL canvas buffer snapshots and embeds an interactive WebGL/Three.js placeholder bridge with matching perspective and aspect ratio.
 * **Deep Dynamic Infinite Feeds (X/Twitter, Instagram, LinkedIn)**:
   * *Condition*: Infinite feeds only render DOM nodes currently in or near the viewport.
   * *Solution*: Scroll through the desired items before executing the extractor to populate the DOM buffer.
@@ -111,14 +115,13 @@ No software in the world can copy these components without direct server or cryp
    * *Examples*: Netflix, Disney+, Spotify encrypted audio tracks, Apple TV+ video streams.
    * *Why*: Encrypted using Google Widevine L1/L3 or Apple FairPlay hardware DRM keys.
    * *Behavior*: The player UI (timeline scrubber, volume controls, play/pause buttons, captions frame, cards) clones with **100% visual fidelity**, but media playback falls back to an open-source test stream or royalty-free asset.
-2. **Pure WebAssembly Canvas-Only Applications**:
-   * *Examples*: Figma's internal canvas workspace, Unreal Engine WebAssembly exports, Google Earth 3D globe.
-   * *Why*: These applications do not use HTML/CSS for their canvas workspace; they render raw pixels directly onto an OpenGL/WebGL canvas context via C++/Rust compiled to WebAssembly.
-   * *Behavior*: The surrounding HTML UI toolbars, menus, and sidebars clone with 100% fidelity, while the internal canvas workspace is preserved as a high-density snapshot.
-3. **Proprietary Backend Compute & Private Databases**:
+2. **Proprietary Backend Compute & Private Databases**:
    * *Examples*: Stripe's fraud detection algorithms, Google's search index database, Airbnb's booking pricing engine.
    * *Why*: These execute purely on remote private servers and never transmit their source code or database records to the browser.
    * *Behavior*: CAU synthesizes local client-side state machines with mock data (`localStorage`, reactive state) for interactive forms, search filters, and carts. You simply connect your own backend API endpoints.
+3. **Native OS Binary Hardware Drivers**:
+   * *Examples*: Direct local USB device controllers, kernel-level anti-cheat binaries.
+   * *Why*: Web standards operate within browser sandbox boundaries.
 
 ---
 
@@ -254,6 +257,8 @@ clone-any-ui/
 │   ├── audit_subpixel_fidelity.py    # 10-point sub-pixel fidelity precision auditor
 │   ├── verify_all_clones.py          # Master repository benchmark runner
 │   ├── security_audit.py             # Automated secrets & confidentiality scanner
+│   ├── wasm_asset_ripper.py          # WebAssembly (.wasm/.data) bundle sniffer & mirror
+│   ├── webgl_mesh_ripper.js          # WebGL 3D buffer hook & GLTF geometry exporter
 │   └── crawl_full_site.py            # Multi-page recursive site crawler
 └── CLONE_EXAMPLES/                   # 6 production-grade reference clones (100% Match)
     ├── linear_app/                   # 86 components, Linear.app dark theme & bento grid

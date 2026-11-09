@@ -398,6 +398,16 @@ def main() -> None:
     if not mirrored_html.exists():
         sys.exit(f"[-] Target HTML not found at: {mirrored_html}")
 
+    # 1.B Sniff & Mirror WebAssembly (WASM) & Canvas 3D Assets (Unity, Unreal, Godot)
+    wasm_cmd = [
+        sys.executable,
+        str(scripts_dir / "wasm_asset_ripper.py"),
+        "--input-html", str(mirrored_html),
+        "--base-url", args.url or "https://example.com",
+        "--out", str(out_dir)
+    ]
+    run_step(wasm_cmd, "Sniffing & Mirroring WebAssembly (WASM) & Canvas 3D Assets")
+
     # 2. Extract Design Tokens
     tokens_cmd = [sys.executable, str(scripts_dir / "extract_design_tokens.py"), "--file", str(mirrored_html), "--out", str(tokens_dir)]
     run_step(tokens_cmd, "Extracting Design Tokens & Synthesizing Tailwind Config")

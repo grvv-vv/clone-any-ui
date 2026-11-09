@@ -32,6 +32,7 @@ You are an expert **Frontend Reverse Engineer & Design System Architect** execut
 | 🔬 **10. Microscopic Detail & Sub-Pixel Polish** | `micro details`, `subpixel accuracy`, `polish clone`, `hairline borders`, `stacked shadows`, `grain overlay` | Extracts sub-pixel typography (OpenType 'tnum', 'cv01'-'cv11', negative tracking, text-wrap balance), 4-layer stacked ambient shadows, 1px inset hairlines, custom sleek scrollbars, brand ::selection styling, tactile active press physics (scale 0.975), double-offset focus-visible rings, and organic 2.2% SVG tactile grain texture. |
 | 🤖 **11. Autonomous Self-Healing & Verification** | `self heal`, `fix broken links`, `verify clone`, `audit syntax`, `infallible check` | Runs AST syntax validation (via `node --check`), auto-patches orphaned braces, normalizes root-relative `/assets/` paths to relative links, injects anti-hotlink `<meta name="referrer" content="no-referrer">`, and verifies 0 broken links or missing assets. |
 | 🛡️ **12. Universal Ingestion & Shadow DOM Piercing** | `copy any site`, `anti bot`, `cloudflare bypass`, `turnstile bypass`, `shadow dom`, `canvas capture` | Launches headless Chrome with stealth anti-automation masking, waits for full SPA client-side hydration, recursively flattens open/closed Shadow DOMs, captures active WebGL/Canvas scenes as high-res WebP fallbacks, and supports 1-click DevTools console clipboard ingestion. |
+| 🕹️ **13. WebAssembly (WASM) & 3D WebGL Canvas Deconstruction** | `clone 3d`, `clone unity game`, `clone wasm`, `clone webassembly`, `rip webgl`, `extract 3d mesh`, `extract gltf` | Sniffs, downloads, and configures `.wasm`, `.data`, `.unityweb`, and `.pck` binary runtimes, injects Cross-Origin Isolation (COOP/COEP) shims for `SharedArrayBuffer`, and intercepts WebGL buffer pipelines (`gl.drawElements`, `gl.bufferData`) to rip 3D geometries and shaders into standard GLTF / Three.js meshes. |
 
 ---
 
@@ -119,6 +120,21 @@ When facing impenetrable Cloudflare Turnstile, CAPTCHA, or authenticated dashboa
 2. Press <kbd>F12</kbd> -> Console -> Paste `browser_extract.js` -> Press Enter.
 3. It inlines SVGs, snapshots canvases, flattens Shadow DOMs, and copies the complete hydrated DOM to your clipboard.
 4. Run in your terminal: `python clone_any_ui.py --clipboard --url <site-url> --out ./my-clone --all`.
+
+### G. `wasm_asset_ripper.py` (WebAssembly & Canvas 3D Engine Ripper)
+Automatically detects, downloads, and configures compiled WebAssembly runtimes (`.wasm`, `.data`, `.unityweb`, `.pck`):
+- Sniffs Emscripten and Unity WebGL loaders (`framework.js`, `loader.js`).
+- Streams large binary packages and rewrites HTML/JS paths to local relative storage.
+- Injects `Cross-Origin-Opener-Policy: same-origin` and `Cross-Origin-Embedder-Policy: require-corp` shims for `SharedArrayBuffer` multithreading.
+```bash
+python scripts/wasm_asset_ripper.py --input-html ./site/index.html --base-url https://target-site.com --out ./site
+```
+
+### H. `webgl_mesh_ripper.js` (WebGL 3D Geometry & Shader Decompiler)
+Hooks browser WebGL/WebGL2 contexts to deconstruct pure canvas scenes:
+- Proxies `gl.drawElements` and `gl.drawArrays` to intercept vertex coordinates, triangle indices, and UV mappings.
+- Intercepts texture mappings (`gl.texImage2D`) and compiled GLSL shader source code.
+- Exports captured 3D meshes directly to standard `.gltf` / `.glb` format via `window.__cau_export_gltf()` or mounts an interactive Three.js OrbitControls canvas bridge.
 
 ### B. `extract_motion_physics.py`
 Extracts CSS `@keyframes`, transition curves, easing functions, and hover physics from live URLs or stylesheets.
